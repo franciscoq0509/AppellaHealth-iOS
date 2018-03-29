@@ -1,0 +1,848 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4520FA56206A5924006FF6A4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4520FA55206A5924006FF6A4 /* Register.storyboard */; };
+		4520FA59206A596A006FF6A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA58206A596A006FF6A4 /* RegisterViewController.swift */; };
+		4520FA5C206A5D3F006FF6A4 /* AppellaHealthColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA5B206A5D3F006FF6A4 /* AppellaHealthColors.swift */; };
+		4520FA5E206A74CC006FF6A4 /* RegisterKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA5D206A74CC006FF6A4 /* RegisterKitchen.swift */; };
+		4520FA60206A804E006FF6A4 /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4520FA5F206A804E006FF6A4 /* ForgotPassword.storyboard */; };
+		4520FA63206A81FC006FF6A4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA62206A81FC006FF6A4 /* ForgotPasswordViewController.swift */; };
+		4520FA65206A8257006FF6A4 /* BlueNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA64206A8257006FF6A4 /* BlueNavigationBar.swift */; };
+		4520FA67206A85CB006FF6A4 /* ForgotPasswordKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA66206A85CB006FF6A4 /* ForgotPasswordKitchen.swift */; };
+		4576B32E206987EA00839269 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B32D206987EA00839269 /* MainAssembly.swift */; };
+		4576B330206988C700839269 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B32F206988C700839269 /* BaseViewController.swift */; };
+		4576B332206988FD00839269 /* LoginKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B331206988FD00839269 /* LoginKitchen.swift */; };
+		4576B3372069891500839269 /* Kitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B3332069891400839269 /* Kitchen.swift */; };
+		4576B3382069891500839269 /* KitchenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B3342069891400839269 /* KitchenDelegate.swift */; };
+		4576B3392069891500839269 /* Resolver+AppellaHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B3352069891400839269 /* Resolver+AppellaHealth.swift */; };
+		4576B33A2069891500839269 /* Optional+AppellaHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B3362069891400839269 /* Optional+AppellaHealth.swift */; };
+		4576B33C2069899D00839269 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B33B2069899D00839269 /* LoginViewState.swift */; };
+		4576B33E20698AA900839269 /* AppContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B33D20698AA900839269 /* AppContract.swift */; };
+		4576B34220698C6800839269 /* AlamofireNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B34120698C6800839269 /* AlamofireNetworkManager.swift */; };
+		4576B345206992F300839269 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B344206992F300839269 /* User.swift */; };
+		4576B3472069979D00839269 /* AnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B3462069979D00839269 /* AnyError.swift */; };
+		4576B34A20699AFB00839269 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B34920699AFB00839269 /* UserDefaults+Extensions.swift */; };
+		4576B34C2069A36A00839269 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B34B2069A36A00839269 /* Response.swift */; };
+		4576B350206A378D00839269 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B34F206A378D00839269 /* UIView+Extensions.swift */; };
+		4576B352206A388E00839269 /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4576B351206A388E00839269 /* localizable.strings */; };
+		4576B357206A39F600839269 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B356206A39F600839269 /* String+Extensions.swift */; };
+		458BBB6720697FAD00F32C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458BBB6620697FAD00F32C99 /* AppDelegate.swift */; };
+		458BBB6E20697FAD00F32C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458BBB6D20697FAD00F32C99 /* Assets.xcassets */; };
+		458BBB7120697FAD00F32C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458BBB6F20697FAD00F32C99 /* LaunchScreen.storyboard */; };
+		458BBB7E2069800700F32C99 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458BBB7D2069800700F32C99 /* Login.storyboard */; };
+		458BBB812069859200F32C99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458BBB802069859200F32C99 /* LoginViewController.swift */; };
+		458BBB832069862800F32C99 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458BBB822069862800F32C99 /* main.swift */; };
+		458BBB85206986DB00F32C99 /* AppellaHealthApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458BBB84206986DB00F32C99 /* AppellaHealthApplication.swift */; };
+		459B1D26206ABC6900954B5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D25206ABC6900954B5B /* Main.storyboard */; };
+		459B1D29206AC91900954B5B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D28206AC91900954B5B /* MainViewController.swift */; };
+		459B1D2E206ACBAB00954B5B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D2D206ACBAB00954B5B /* SideMenuViewController.swift */; };
+		459B1D30206AD07D00954B5B /* ArticleCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D2F206AD07D00954B5B /* ArticleCategory.swift */; };
+		459B1D38206AD3F700954B5B /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D36206AD3F700954B5B /* SideMenuTableViewCell.swift */; };
+		459B1D39206AD3F700954B5B /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D37206AD3F700954B5B /* SideMenuTableViewCell.xib */; };
+		459B1D3D206B98C600954B5B /* SideMenuKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D3C206B98C600954B5B /* SideMenuKitchen.swift */; };
+		459B1D3F206B9CC400954B5B /* MainKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D3E206B9CC400954B5B /* MainKitchen.swift */; };
+		459B1D41206BAFE300954B5B /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D40206BAFE300954B5B /* Article.swift */; };
+		459B1D46206BB2B400954B5B /* MainViewLargeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D44206BB2B400954B5B /* MainViewLargeTableViewCell.swift */; };
+		459B1D47206BB2B400954B5B /* MainViewLargeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D45206BB2B400954B5B /* MainViewLargeTableViewCell.xib */; };
+		459B1D4B206BB5B000954B5B /* MainViewSmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D49206BB5B000954B5B /* MainViewSmallTableViewCell.swift */; };
+		459B1D4C206BB5B000954B5B /* MainViewSmallTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D4A206BB5B000954B5B /* MainViewSmallTableViewCell.xib */; };
+		459B1D4F206BBB7800954B5B /* HelpDesk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D4E206BBB7800954B5B /* HelpDesk.storyboard */; };
+		459B1D52206BBC5500954B5B /* HelpDeskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D51206BBC5500954B5B /* HelpDeskViewController.swift */; };
+		459B1D55206BC1C300954B5B /* PhoneCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D54206BC1C300954B5B /* PhoneCaller.swift */; };
+		459B1D57206BC96100954B5B /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D56206BC96100954B5B /* UIStoryboard+Extensions.swift */; };
+		459B1D59206BD1C800954B5B /* RemoveBackButtonTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D58206BD1C800954B5B /* RemoveBackButtonTitle.swift */; };
+		459B1D5C206BD68300954B5B /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D5B206BD68300954B5B /* Account.storyboard */; };
+		459B1D5E206BD6BA00954B5B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D5D206BD6BA00954B5B /* AccountViewController.swift */; };
+		459B1D62206BD88B00954B5B /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D60206BD88B00954B5B /* AccountTableViewCell.swift */; };
+		459B1D63206BD88B00954B5B /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D61206BD88B00954B5B /* AccountTableViewCell.xib */; };
+		459B1D65206BED5300954B5B /* AccountKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D64206BED5300954B5B /* AccountKitchen.swift */; };
+		459B1D68206BFA4500954B5B /* NotificationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D67206BFA4500954B5B /* NotificationStatus.swift */; };
+		459B1D6B206C0A6400954B5B /* PrivacyPolicy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D6A206C0A6400954B5B /* PrivacyPolicy.storyboard */; };
+		459B1D6E206C0C7400954B5B /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D6D206C0C7400954B5B /* PrivacyPolicyViewController.swift */; };
+		459B1D70206C0CA600954B5B /* PrivacyPolicyKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D6F206C0CA600954B5B /* PrivacyPolicyKitchen.swift */; };
+		459B1D73206C12E700954B5B /* PageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D72206C12E700954B5B /* PageResponse.swift */; };
+		459B1D75206C1A4200954B5B /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D74206C1A4200954B5B /* UINavigationBar+Extensions.swift */; };
+		459B1D77206C1A8F00954B5B /* CAGradientLayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D76206C1A8F00954B5B /* CAGradientLayer+Extensions.swift */; };
+		459B1D79206C206400954B5B /* AddLabelToRightBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D78206C206400954B5B /* AddLabelToRightBarItem.swift */; };
+		CBCF60E9889BC8FDD09B7544 /* Pods_Appella_Health.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBF0D296BDDBFD8E2736601 /* Pods_Appella_Health.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4520FA55206A5924006FF6A4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		4520FA58206A596A006FF6A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4520FA5B206A5D3F006FF6A4 /* AppellaHealthColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppellaHealthColors.swift; sourceTree = "<group>"; };
+		4520FA5D206A74CC006FF6A4 /* RegisterKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterKitchen.swift; sourceTree = "<group>"; };
+		4520FA5F206A804E006FF6A4 /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
+		4520FA62206A81FC006FF6A4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		4520FA64206A8257006FF6A4 /* BlueNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueNavigationBar.swift; sourceTree = "<group>"; };
+		4520FA66206A85CB006FF6A4 /* ForgotPasswordKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordKitchen.swift; sourceTree = "<group>"; };
+		4576B32D206987EA00839269 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		4576B32F206988C700839269 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4576B331206988FD00839269 /* LoginKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginKitchen.swift; sourceTree = "<group>"; };
+		4576B3332069891400839269 /* Kitchen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kitchen.swift; sourceTree = "<group>"; };
+		4576B3342069891400839269 /* KitchenDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KitchenDelegate.swift; sourceTree = "<group>"; };
+		4576B3352069891400839269 /* Resolver+AppellaHealth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Resolver+AppellaHealth.swift"; sourceTree = "<group>"; };
+		4576B3362069891400839269 /* Optional+AppellaHealth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+AppellaHealth.swift"; sourceTree = "<group>"; };
+		4576B33B2069899D00839269 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
+		4576B33D20698AA900839269 /* AppContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContract.swift; sourceTree = "<group>"; };
+		4576B34120698C6800839269 /* AlamofireNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkManager.swift; sourceTree = "<group>"; };
+		4576B344206992F300839269 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4576B3462069979D00839269 /* AnyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyError.swift; sourceTree = "<group>"; };
+		4576B34920699AFB00839269 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		4576B34B2069A36A00839269 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		4576B34F206A378D00839269 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		4576B351206A388E00839269 /* localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = localizable.strings; sourceTree = "<group>"; };
+		4576B356206A39F600839269 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		458BBB6320697FAD00F32C99 /* Appella Health.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Appella Health.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		458BBB6620697FAD00F32C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		458BBB6D20697FAD00F32C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		458BBB7020697FAD00F32C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		458BBB7220697FAD00F32C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		458BBB7D2069800700F32C99 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		458BBB802069859200F32C99 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		458BBB822069862800F32C99 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		458BBB84206986DB00F32C99 /* AppellaHealthApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppellaHealthApplication.swift; sourceTree = "<group>"; };
+		459B1D25206ABC6900954B5B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		459B1D28206AC91900954B5B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		459B1D2D206ACBAB00954B5B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		459B1D2F206AD07D00954B5B /* ArticleCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCategory.swift; sourceTree = "<group>"; };
+		459B1D36206AD3F700954B5B /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		459B1D37206AD3F700954B5B /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
+		459B1D3C206B98C600954B5B /* SideMenuKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuKitchen.swift; sourceTree = "<group>"; };
+		459B1D3E206B9CC400954B5B /* MainKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainKitchen.swift; sourceTree = "<group>"; };
+		459B1D40206BAFE300954B5B /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		459B1D44206BB2B400954B5B /* MainViewLargeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewLargeTableViewCell.swift; sourceTree = "<group>"; };
+		459B1D45206BB2B400954B5B /* MainViewLargeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewLargeTableViewCell.xib; sourceTree = "<group>"; };
+		459B1D49206BB5B000954B5B /* MainViewSmallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSmallTableViewCell.swift; sourceTree = "<group>"; };
+		459B1D4A206BB5B000954B5B /* MainViewSmallTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewSmallTableViewCell.xib; sourceTree = "<group>"; };
+		459B1D4E206BBB7800954B5B /* HelpDesk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelpDesk.storyboard; sourceTree = "<group>"; };
+		459B1D51206BBC5500954B5B /* HelpDeskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskViewController.swift; sourceTree = "<group>"; };
+		459B1D54206BC1C300954B5B /* PhoneCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCaller.swift; sourceTree = "<group>"; };
+		459B1D56206BC96100954B5B /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		459B1D58206BD1C800954B5B /* RemoveBackButtonTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBackButtonTitle.swift; sourceTree = "<group>"; };
+		459B1D5B206BD68300954B5B /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		459B1D5D206BD6BA00954B5B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		459B1D60206BD88B00954B5B /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		459B1D61206BD88B00954B5B /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
+		459B1D64206BED5300954B5B /* AccountKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountKitchen.swift; sourceTree = "<group>"; };
+		459B1D67206BFA4500954B5B /* NotificationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStatus.swift; sourceTree = "<group>"; };
+		459B1D6A206C0A6400954B5B /* PrivacyPolicy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyPolicy.storyboard; sourceTree = "<group>"; };
+		459B1D6D206C0C7400954B5B /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		459B1D6F206C0CA600954B5B /* PrivacyPolicyKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyKitchen.swift; sourceTree = "<group>"; };
+		459B1D72206C12E700954B5B /* PageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageResponse.swift; sourceTree = "<group>"; };
+		459B1D74206C1A4200954B5B /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
+		459B1D76206C1A8F00954B5B /* CAGradientLayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Extensions.swift"; sourceTree = "<group>"; };
+		459B1D78206C206400954B5B /* AddLabelToRightBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLabelToRightBarItem.swift; sourceTree = "<group>"; };
+		5EBF0D296BDDBFD8E2736601 /* Pods_Appella_Health.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Appella_Health.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B2F0C2D0F262E31E8618AE /* Pods-Appella Health.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appella Health.release.xcconfig"; path = "Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health.release.xcconfig"; sourceTree = "<group>"; };
+		C292C25F00C6368C894D5531 /* Pods-Appella Health.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appella Health.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		458BBB6020697FAD00F32C99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBCF60E9889BC8FDD09B7544 /* Pods_Appella_Health.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4520FA57206A5954006FF6A4 /* RegisterController */ = {
+			isa = PBXGroup;
+			children = (
+				4520FA58206A596A006FF6A4 /* RegisterViewController.swift */,
+				4520FA5D206A74CC006FF6A4 /* RegisterKitchen.swift */,
+			);
+			path = RegisterController;
+			sourceTree = "<group>";
+		};
+		4520FA5A206A5D31006FF6A4 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				4520FA5B206A5D3F006FF6A4 /* AppellaHealthColors.swift */,
+				4520FA64206A8257006FF6A4 /* BlueNavigationBar.swift */,
+				459B1D58206BD1C800954B5B /* RemoveBackButtonTitle.swift */,
+				459B1D78206C206400954B5B /* AddLabelToRightBarItem.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		4520FA61206A81EA006FF6A4 /* ForgotPasswordController */ = {
+			isa = PBXGroup;
+			children = (
+				4520FA62206A81FC006FF6A4 /* ForgotPasswordViewController.swift */,
+				4520FA66206A85CB006FF6A4 /* ForgotPasswordKitchen.swift */,
+			);
+			path = ForgotPasswordController;
+			sourceTree = "<group>";
+		};
+		4576B32C206987DD00839269 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				4576B3462069979D00839269 /* AnyError.swift */,
+				4576B3332069891400839269 /* Kitchen.swift */,
+				4576B3342069891400839269 /* KitchenDelegate.swift */,
+				4576B3362069891400839269 /* Optional+AppellaHealth.swift */,
+				4576B3352069891400839269 /* Resolver+AppellaHealth.swift */,
+				4576B32F206988C700839269 /* BaseViewController.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		4576B33F20698AC700839269 /* AppContract */ = {
+			isa = PBXGroup;
+			children = (
+				4576B33D20698AA900839269 /* AppContract.swift */,
+				4576B32D206987EA00839269 /* MainAssembly.swift */,
+			);
+			path = AppContract;
+			sourceTree = "<group>";
+		};
+		4576B34020698C5900839269 /* APILayer */ = {
+			isa = PBXGroup;
+			children = (
+				4576B34120698C6800839269 /* AlamofireNetworkManager.swift */,
+			);
+			path = APILayer;
+			sourceTree = "<group>";
+		};
+		4576B343206992E100839269 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4576B344206992F300839269 /* User.swift */,
+				4576B34B2069A36A00839269 /* Response.swift */,
+				459B1D2F206AD07D00954B5B /* ArticleCategory.swift */,
+				459B1D40206BAFE300954B5B /* Article.swift */,
+				459B1D67206BFA4500954B5B /* NotificationStatus.swift */,
+				459B1D72206C12E700954B5B /* PageResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4576B34820699AED00839269 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4576B34920699AFB00839269 /* UserDefaults+Extensions.swift */,
+				4576B34F206A378D00839269 /* UIView+Extensions.swift */,
+				4576B356206A39F600839269 /* String+Extensions.swift */,
+				459B1D56206BC96100954B5B /* UIStoryboard+Extensions.swift */,
+				459B1D74206C1A4200954B5B /* UINavigationBar+Extensions.swift */,
+				459B1D76206C1A8F00954B5B /* CAGradientLayer+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		458BBB5A20697FAD00F32C99 = {
+			isa = PBXGroup;
+			children = (
+				458BBB6520697FAD00F32C99 /* Appella Health */,
+				458BBB6420697FAD00F32C99 /* Products */,
+				82A2081A35B2602E80F43043 /* Pods */,
+				FDE599EAEE254C3A10AA379D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		458BBB6420697FAD00F32C99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				458BBB6320697FAD00F32C99 /* Appella Health.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		458BBB6520697FAD00F32C99 /* Appella Health */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D53206BC1AA00954B5B /* Helpers */,
+				4520FA5A206A5D31006FF6A4 /* Style */,
+				4576B34820699AED00839269 /* Extensions */,
+				4576B343206992E100839269 /* Models */,
+				4576B34020698C5900839269 /* APILayer */,
+				4576B33F20698AC700839269 /* AppContract */,
+				4576B32C206987DD00839269 /* Foundation */,
+				458BBB7C20697FE100F32C99 /* SupportFiles */,
+				458BBB7B20697FD700F32C99 /* Assets */,
+				458BBB7A20697FCE00F32C99 /* Controllers */,
+				458BBB7920697FC100F32C99 /* Storyboards */,
+				458BBB7820697FB300F32C99 /* AppDelegate */,
+			);
+			path = "Appella Health";
+			sourceTree = "<group>";
+		};
+		458BBB7820697FB300F32C99 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				458BBB6620697FAD00F32C99 /* AppDelegate.swift */,
+				458BBB822069862800F32C99 /* main.swift */,
+				458BBB84206986DB00F32C99 /* AppellaHealthApplication.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		458BBB7920697FC100F32C99 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				458BBB6F20697FAD00F32C99 /* LaunchScreen.storyboard */,
+				458BBB7D2069800700F32C99 /* Login.storyboard */,
+				4520FA55206A5924006FF6A4 /* Register.storyboard */,
+				4520FA5F206A804E006FF6A4 /* ForgotPassword.storyboard */,
+				459B1D25206ABC6900954B5B /* Main.storyboard */,
+				459B1D4E206BBB7800954B5B /* HelpDesk.storyboard */,
+				459B1D5B206BD68300954B5B /* Account.storyboard */,
+				459B1D6A206C0A6400954B5B /* PrivacyPolicy.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		458BBB7A20697FCE00F32C99 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D6C206C0C5800954B5B /* PrivacyPolicyController */,
+				459B1D5A206BD66C00954B5B /* AccountController */,
+				459B1D50206BBB8900954B5B /* HelpDeskController */,
+				459B1D2A206ACB7800954B5B /* SideMenuController */,
+				459B1D27206AC90F00954B5B /* MainController */,
+				4520FA61206A81EA006FF6A4 /* ForgotPasswordController */,
+				4520FA57206A5954006FF6A4 /* RegisterController */,
+				458BBB7F2069858100F32C99 /* LoginController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		458BBB7B20697FD700F32C99 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				458BBB6D20697FAD00F32C99 /* Assets.xcassets */,
+				4576B351206A388E00839269 /* localizable.strings */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		458BBB7C20697FE100F32C99 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				458BBB7220697FAD00F32C99 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		458BBB7F2069858100F32C99 /* LoginController */ = {
+			isa = PBXGroup;
+			children = (
+				458BBB802069859200F32C99 /* LoginViewController.swift */,
+				4576B331206988FD00839269 /* LoginKitchen.swift */,
+				4576B33B2069899D00839269 /* LoginViewState.swift */,
+			);
+			path = LoginController;
+			sourceTree = "<group>";
+		};
+		459B1D27206AC90F00954B5B /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D42206BB27C00954B5B /* MainControllerTableViewCells */,
+				459B1D28206AC91900954B5B /* MainViewController.swift */,
+				459B1D3E206B9CC400954B5B /* MainKitchen.swift */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
+		459B1D2A206ACB7800954B5B /* SideMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D35206AD3E400954B5B /* SideMenuTableViewCell */,
+				459B1D2D206ACBAB00954B5B /* SideMenuViewController.swift */,
+				459B1D3C206B98C600954B5B /* SideMenuKitchen.swift */,
+			);
+			path = SideMenuController;
+			sourceTree = "<group>";
+		};
+		459B1D35206AD3E400954B5B /* SideMenuTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D36206AD3F700954B5B /* SideMenuTableViewCell.swift */,
+				459B1D37206AD3F700954B5B /* SideMenuTableViewCell.xib */,
+			);
+			path = SideMenuTableViewCell;
+			sourceTree = "<group>";
+		};
+		459B1D42206BB27C00954B5B /* MainControllerTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D48206BB59900954B5B /* SmallTableViewCell */,
+				459B1D43206BB28C00954B5B /* LargeTableViewCell */,
+			);
+			path = MainControllerTableViewCells;
+			sourceTree = "<group>";
+		};
+		459B1D43206BB28C00954B5B /* LargeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D44206BB2B400954B5B /* MainViewLargeTableViewCell.swift */,
+				459B1D45206BB2B400954B5B /* MainViewLargeTableViewCell.xib */,
+			);
+			path = LargeTableViewCell;
+			sourceTree = "<group>";
+		};
+		459B1D48206BB59900954B5B /* SmallTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D49206BB5B000954B5B /* MainViewSmallTableViewCell.swift */,
+				459B1D4A206BB5B000954B5B /* MainViewSmallTableViewCell.xib */,
+			);
+			path = SmallTableViewCell;
+			sourceTree = "<group>";
+		};
+		459B1D50206BBB8900954B5B /* HelpDeskController */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D51206BBC5500954B5B /* HelpDeskViewController.swift */,
+			);
+			path = HelpDeskController;
+			sourceTree = "<group>";
+		};
+		459B1D53206BC1AA00954B5B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D54206BC1C300954B5B /* PhoneCaller.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		459B1D5A206BD66C00954B5B /* AccountController */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D5F206BD87300954B5B /* AccountTableViewCell */,
+				459B1D5D206BD6BA00954B5B /* AccountViewController.swift */,
+				459B1D64206BED5300954B5B /* AccountKitchen.swift */,
+			);
+			path = AccountController;
+			sourceTree = "<group>";
+		};
+		459B1D5F206BD87300954B5B /* AccountTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D60206BD88B00954B5B /* AccountTableViewCell.swift */,
+				459B1D61206BD88B00954B5B /* AccountTableViewCell.xib */,
+			);
+			path = AccountTableViewCell;
+			sourceTree = "<group>";
+		};
+		459B1D6C206C0C5800954B5B /* PrivacyPolicyController */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D6D206C0C7400954B5B /* PrivacyPolicyViewController.swift */,
+				459B1D6F206C0CA600954B5B /* PrivacyPolicyKitchen.swift */,
+			);
+			path = PrivacyPolicyController;
+			sourceTree = "<group>";
+		};
+		82A2081A35B2602E80F43043 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C292C25F00C6368C894D5531 /* Pods-Appella Health.debug.xcconfig */,
+				68B2F0C2D0F262E31E8618AE /* Pods-Appella Health.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FDE599EAEE254C3A10AA379D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EBF0D296BDDBFD8E2736601 /* Pods_Appella_Health.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		458BBB6220697FAD00F32C99 /* Appella Health */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 458BBB7520697FAD00F32C99 /* Build configuration list for PBXNativeTarget "Appella Health" */;
+			buildPhases = (
+				6C754864708F79BAEF8A38EC /* [CP] Check Pods Manifest.lock */,
+				458BBB5F20697FAD00F32C99 /* Sources */,
+				458BBB6020697FAD00F32C99 /* Frameworks */,
+				458BBB6120697FAD00F32C99 /* Resources */,
+				1424452E23BD50832993D6FE /* [CP] Embed Pods Frameworks */,
+				AF9834DFE5711D0C3ED40E58 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Appella Health";
+			productName = "Appella Health";
+			productReference = 458BBB6320697FAD00F32C99 /* Appella Health.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		458BBB5B20697FAD00F32C99 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = VladOS;
+				TargetAttributes = {
+					458BBB6220697FAD00F32C99 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 458BBB5E20697FAD00F32C99 /* Build configuration list for PBXProject "Appella Health" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 458BBB5A20697FAD00F32C99;
+			productRefGroup = 458BBB6420697FAD00F32C99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				458BBB6220697FAD00F32C99 /* Appella Health */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		458BBB6120697FAD00F32C99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459B1D26206ABC6900954B5B /* Main.storyboard in Resources */,
+				459B1D4C206BB5B000954B5B /* MainViewSmallTableViewCell.xib in Resources */,
+				458BBB7120697FAD00F32C99 /* LaunchScreen.storyboard in Resources */,
+				459B1D4F206BBB7800954B5B /* HelpDesk.storyboard in Resources */,
+				4576B352206A388E00839269 /* localizable.strings in Resources */,
+				458BBB6E20697FAD00F32C99 /* Assets.xcassets in Resources */,
+				458BBB7E2069800700F32C99 /* Login.storyboard in Resources */,
+				459B1D6B206C0A6400954B5B /* PrivacyPolicy.storyboard in Resources */,
+				4520FA60206A804E006FF6A4 /* ForgotPassword.storyboard in Resources */,
+				4520FA56206A5924006FF6A4 /* Register.storyboard in Resources */,
+				459B1D63206BD88B00954B5B /* AccountTableViewCell.xib in Resources */,
+				459B1D39206AD3F700954B5B /* SideMenuTableViewCell.xib in Resources */,
+				459B1D5C206BD68300954B5B /* Account.storyboard in Resources */,
+				459B1D47206BB2B400954B5B /* MainViewLargeTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1424452E23BD50832993D6FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C754864708F79BAEF8A38EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Appella Health-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF9834DFE5711D0C3ED40E58 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		458BBB5F20697FAD00F32C99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4576B357206A39F600839269 /* String+Extensions.swift in Sources */,
+				459B1D75206C1A4200954B5B /* UINavigationBar+Extensions.swift in Sources */,
+				4576B32E206987EA00839269 /* MainAssembly.swift in Sources */,
+				4576B34A20699AFB00839269 /* UserDefaults+Extensions.swift in Sources */,
+				4576B3382069891500839269 /* KitchenDelegate.swift in Sources */,
+				459B1D2E206ACBAB00954B5B /* SideMenuViewController.swift in Sources */,
+				458BBB812069859200F32C99 /* LoginViewController.swift in Sources */,
+				4520FA5E206A74CC006FF6A4 /* RegisterKitchen.swift in Sources */,
+				4520FA67206A85CB006FF6A4 /* ForgotPasswordKitchen.swift in Sources */,
+				4576B34C2069A36A00839269 /* Response.swift in Sources */,
+				459B1D77206C1A8F00954B5B /* CAGradientLayer+Extensions.swift in Sources */,
+				459B1D59206BD1C800954B5B /* RemoveBackButtonTitle.swift in Sources */,
+				459B1D4B206BB5B000954B5B /* MainViewSmallTableViewCell.swift in Sources */,
+				458BBB6720697FAD00F32C99 /* AppDelegate.swift in Sources */,
+				4520FA63206A81FC006FF6A4 /* ForgotPasswordViewController.swift in Sources */,
+				459B1D30206AD07D00954B5B /* ArticleCategory.swift in Sources */,
+				4520FA65206A8257006FF6A4 /* BlueNavigationBar.swift in Sources */,
+				459B1D41206BAFE300954B5B /* Article.swift in Sources */,
+				4576B33C2069899D00839269 /* LoginViewState.swift in Sources */,
+				459B1D73206C12E700954B5B /* PageResponse.swift in Sources */,
+				459B1D70206C0CA600954B5B /* PrivacyPolicyKitchen.swift in Sources */,
+				458BBB85206986DB00F32C99 /* AppellaHealthApplication.swift in Sources */,
+				459B1D46206BB2B400954B5B /* MainViewLargeTableViewCell.swift in Sources */,
+				459B1D3D206B98C600954B5B /* SideMenuKitchen.swift in Sources */,
+				459B1D38206AD3F700954B5B /* SideMenuTableViewCell.swift in Sources */,
+				4520FA59206A596A006FF6A4 /* RegisterViewController.swift in Sources */,
+				4576B33A2069891500839269 /* Optional+AppellaHealth.swift in Sources */,
+				459B1D6E206C0C7400954B5B /* PrivacyPolicyViewController.swift in Sources */,
+				4576B34220698C6800839269 /* AlamofireNetworkManager.swift in Sources */,
+				459B1D3F206B9CC400954B5B /* MainKitchen.swift in Sources */,
+				459B1D52206BBC5500954B5B /* HelpDeskViewController.swift in Sources */,
+				459B1D5E206BD6BA00954B5B /* AccountViewController.swift in Sources */,
+				4576B345206992F300839269 /* User.swift in Sources */,
+				4576B3392069891500839269 /* Resolver+AppellaHealth.swift in Sources */,
+				4576B350206A378D00839269 /* UIView+Extensions.swift in Sources */,
+				4576B332206988FD00839269 /* LoginKitchen.swift in Sources */,
+				4576B3472069979D00839269 /* AnyError.swift in Sources */,
+				458BBB832069862800F32C99 /* main.swift in Sources */,
+				4576B3372069891500839269 /* Kitchen.swift in Sources */,
+				459B1D65206BED5300954B5B /* AccountKitchen.swift in Sources */,
+				4520FA5C206A5D3F006FF6A4 /* AppellaHealthColors.swift in Sources */,
+				459B1D29206AC91900954B5B /* MainViewController.swift in Sources */,
+				4576B33E20698AA900839269 /* AppContract.swift in Sources */,
+				4576B330206988C700839269 /* BaseViewController.swift in Sources */,
+				459B1D62206BD88B00954B5B /* AccountTableViewCell.swift in Sources */,
+				459B1D57206BC96100954B5B /* UIStoryboard+Extensions.swift in Sources */,
+				459B1D55206BC1C300954B5B /* PhoneCaller.swift in Sources */,
+				459B1D68206BFA4500954B5B /* NotificationStatus.swift in Sources */,
+				459B1D79206C206400954B5B /* AddLabelToRightBarItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		458BBB6F20697FAD00F32C99 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				458BBB7020697FAD00F32C99 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		458BBB7320697FAD00F32C99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		458BBB7420697FAD00F32C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		458BBB7620697FAD00F32C99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C292C25F00C6368C894D5531 /* Pods-Appella Health.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DCX4J53M3H;
+				INFOPLIST_FILE = "Appella Health/SupportFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vlados.Appella-Health";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		458BBB7720697FAD00F32C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B2F0C2D0F262E31E8618AE /* Pods-Appella Health.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DCX4J53M3H;
+				INFOPLIST_FILE = "Appella Health/SupportFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vlados.Appella-Health";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		458BBB5E20697FAD00F32C99 /* Build configuration list for PBXProject "Appella Health" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				458BBB7320697FAD00F32C99 /* Debug */,
+				458BBB7420697FAD00F32C99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		458BBB7520697FAD00F32C99 /* Build configuration list for PBXNativeTarget "Appella Health" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				458BBB7620697FAD00F32C99 /* Debug */,
+				458BBB7720697FAD00F32C99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 458BBB5B20697FAD00F32C99 /* Project object */;
+}

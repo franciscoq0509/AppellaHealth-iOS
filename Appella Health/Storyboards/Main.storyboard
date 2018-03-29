@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eBo-a5-Ibe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vtc-Oc-6Hc">
+            <objects>
+                <navigationController id="eBo-a5-Ibe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kAw-Im-U3w">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CX3-mz-UIU" kind="relationship" relationship="rootViewController" id="BX2-KA-G9g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQO-79-4Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2388" y="9"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="6aC-jm-3SH">
+            <objects>
+                <viewController id="CX3-mz-UIU" customClass="MainViewController" customModule="Appella_Health" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WFr-tJ-aQA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="x6I-mu-feD">
+                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="3vf-Li-Bxc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="8Xk-fx-cgH" kind="presentation" id="Pbn-lL-zmb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Appella Health" id="s7w-6t-kq9"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="WFr-tJ-aQA" id="ZKZ-gi-TJ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whp-Nu-MYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1466" y="9"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="PuE-n0-Cmg">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="8Xk-fx-cgH" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8up-mw-yHL">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="OKw-Bq-VOq" kind="relationship" relationship="rootViewController" id="r5P-sZ-Qi9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vw-oc-fAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="10"/>
+        </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="4En-Kt-tXv">
+            <objects>
+                <viewController id="OKw-Bq-VOq" customClass="SideMenuViewController" customModule="Appella_Health" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ETZ-jO-QwH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CTb-2o-0sa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OKw-Bq-VOq" id="w1W-sF-pTf"/>
+                                    <outlet property="delegate" destination="OKw-Bq-VOq" id="qb3-pu-sCj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CTb-2o-0sa" firstAttribute="trailing" secondItem="h8j-lu-c1j" secondAttribute="trailing" id="MQd-fl-qQC"/>
+                            <constraint firstItem="CTb-2o-0sa" firstAttribute="bottom" secondItem="h8j-lu-c1j" secondAttribute="bottom" id="Rhf-xH-rj5"/>
+                            <constraint firstItem="CTb-2o-0sa" firstAttribute="leading" secondItem="h8j-lu-c1j" secondAttribute="leading" id="Yyt-jT-iSQ"/>
+                            <constraint firstItem="CTb-2o-0sa" firstAttribute="top" secondItem="ETZ-jO-QwH" secondAttribute="top" id="ac2-oa-P7x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h8j-lu-c1j"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F5u-wH-2mI"/>
+                    <connections>
+                        <outlet property="tableView" destination="CTb-2o-0sa" id="5fy-mb-uck"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7m-ef-pjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429.60000000000002" y="-1.3493253373313345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menuIcon" width="50" height="50"/>
+    </resources>
+</document>
