@@ -9,7 +9,7 @@
 import Foundation
 
 enum RegisterViewEvent {
-    case didTapRegister(name: String, email: String, password: String)
+    case didTapRegister(firstName: String, lastName: String, email: String, password: String)
 }
 
 enum RegisterState {
@@ -33,14 +33,14 @@ class RegisterKitchen: Kitchen {
     
     func receive(event: ViewEvent) {
         switch event {
-        case .didTapRegister(let name, let email, let password):
-            register(name: name, email: email, password: password)
+        case .didTapRegister(let firstName, let lastName, let email, let password):
+            register(firstName: firstName, lastName: lastName, email: email, password: password)
         }
     }
     
-    func register(name: String, email: String, password: String) {
+    func register(firstName: String, lastName: String, email: String, password: String) {
         self.delegate?.perform(.startLoading)
-        networkManager.register(name: name, email: email, password: password).onSuccess { [weak self] message in
+        networkManager.register(firstName: firstName, lastName: lastName, email: email, password: password).onSuccess { [weak self] message in
             guard let _self = self else {
                 return
             }

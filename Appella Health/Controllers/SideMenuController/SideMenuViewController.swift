@@ -59,7 +59,7 @@ extension SideMenuViewController: UITableViewDataSource {
             fatalError("Unexpected UITableViewCell")
         }
         let imageViewIsHidden = indexPath.row != ArticleCategory.allCategories.count - 1
-        cell.setupCell(with: category.rawValue, imageViewIsHidden: imageViewIsHidden)
+        cell.setupCell(with: category.describing, imageViewIsHidden: imageViewIsHidden)
         return cell
     }
 }

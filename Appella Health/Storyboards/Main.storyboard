@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eBo-a5-Ibe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eBo-a5-Ibe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,11 +35,27 @@
         <scene sceneID="6aC-jm-3SH">
             <objects>
                 <viewController id="CX3-mz-UIU" customClass="MainViewController" customModule="Appella_Health" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WFr-tJ-aQA">
+                    <view key="view" contentMode="scaleToFill" id="hJq-qO-egE" customClass="MainView" customModule="Appella_Health" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UV9-8S-4ZZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tableView>
+                        <constraints>
+                            <constraint firstItem="UV9-8S-4ZZ" firstAttribute="trailing" secondItem="MLd-kz-agt" secondAttribute="trailing" id="Lin-hT-w8F"/>
+                            <constraint firstItem="UV9-8S-4ZZ" firstAttribute="bottom" secondItem="hJq-qO-egE" secondAttribute="bottom" id="Sgu-Db-5vw"/>
+                            <constraint firstItem="UV9-8S-4ZZ" firstAttribute="leading" secondItem="MLd-kz-agt" secondAttribute="leading" id="hBq-xG-9As"/>
+                            <constraint firstItem="UV9-8S-4ZZ" firstAttribute="top" secondItem="hJq-qO-egE" secondAttribute="top" id="vOu-9U-EJS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MLd-kz-agt"/>
+                        <connections>
+                            <outlet property="tableView" destination="UV9-8S-4ZZ" id="HlG-N1-Y6d"/>
+                        </connections>
+                    </view>
                     <navigationItem key="navigationItem" id="x6I-mu-feD">
                         <barButtonItem key="leftBarButtonItem" image="menuIcon" id="3vf-Li-Bxc">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,12 +66,12 @@
                         <barButtonItem key="rightBarButtonItem" title="Appella Health" id="s7w-6t-kq9"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="WFr-tJ-aQA" id="ZKZ-gi-TJ5"/>
+                        <outlet property="mainView" destination="hJq-qO-egE" id="l9R-My-4VP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whp-Nu-MYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1466" y="9"/>
+            <point key="canvasLocation" x="-1466.4000000000001" y="8.5457271364317844"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="PuE-n0-Cmg">

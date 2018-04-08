@@ -44,15 +44,30 @@ class LoginKitchen: Kitchen {
             guard let _self = self else {
                 return
             }
-            _self.delegate?.perform(.finishLoading)
-            UserDefaults.setUserId(user.userId)
-            _self.delegate?.perform(.logined)
+            UserDefaults.setApiKey(user.apiKey)
+            _self.networkManager.switchNotificationStatus(status: true).onSuccess { [weak self] _ in
+                    guard let _self = self else {
+                        return
+                    }
+                    _self.delegate?.perform(.finishLoading)
+                    _self.delegate?.perform(.logined)
+                }.onFailure { [weak self] error in
+                    guard let _self = self else {
+                        return
+                    }
+                    UserDefaults.setApiKey(nil)
+                    _self.handleLoginError(error)
+                }
         }.onFailure { [weak self] error in
             guard let _self = self else {
                 return
             }
-            _self.delegate?.perform(.finishLoading)
-            _self.delegate?.perform(.errorHappend(error.message))
+            _self.handleLoginError(error)
         }
+    }
+
+    private func handleLoginError(_ error: AnyError) {
+        self.delegate?.perform(.finishLoading)
+        self.delegate?.perform(.errorHappend(error.message))
     }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KwO-Uu-Eg6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Article View Controller-->
+        <scene sceneID="FGb-Yh-OjO">
+            <objects>
+                <viewController id="KwO-Uu-Eg6" customClass="ArticleViewController" customModule="Appella_Health" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="60G-PV-XcQ" customClass="ArticleView" customModule="Appella_Health" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-uE-z61">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gc8-uE-z61" firstAttribute="top" secondItem="60G-PV-XcQ" secondAttribute="top" id="1p0-NC-zTx"/>
+                            <constraint firstItem="gc8-uE-z61" firstAttribute="bottom" secondItem="60G-PV-XcQ" secondAttribute="bottom" id="8Tj-Xj-hhr"/>
+                            <constraint firstItem="gc8-uE-z61" firstAttribute="trailing" secondItem="yEw-b0-RYc" secondAttribute="trailing" id="ZzN-bI-Xbd"/>
+                            <constraint firstItem="gc8-uE-z61" firstAttribute="leading" secondItem="yEw-b0-RYc" secondAttribute="leading" id="oWG-QJ-tbO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yEw-b0-RYc"/>
+                        <connections>
+                            <outlet property="tableView" destination="gc8-uE-z61" id="T1T-DM-H2i"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="articleView" destination="60G-PV-XcQ" id="v8o-9t-NNK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hnc-M6-BZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2000000000000002" y="174.96251874062969"/>
+        </scene>
+    </scenes>
+</document>

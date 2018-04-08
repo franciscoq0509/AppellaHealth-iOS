@@ -9,7 +9,8 @@
 "Enter email" = "Enter email";
 "Enter valid email" = "Enter valid email";
 "Enter password" = "Enter password";
-"Enter name" = "Enter name";
+"Enter First Name" = "Enter First Name";
+"Enter Last Name" = "Enter Last Name";
 "Account" = "Account";
 "Settings" = "Settings";
 "Support" = "Support";
@@ -17,3 +18,13 @@
 "Enable notifications" = "Enable notifications";
 "Privacy Policy" = "Privacy Policy";
 "Appella Health" = "Appella Health";
+"News" = "News";
+"Human Resource" = "Human Resource";
+"Information Technology" = "Information Technology";
+"Events" = "Events";
+"Dining" = "Dining";
+"Nursing" = "Nursing";
+"Photo Gallery" = "Photo Gallery";
+"Help Desk" = "Help Desk";
+"MORE" = "MORE";
+"NEWS" = "NEWS";

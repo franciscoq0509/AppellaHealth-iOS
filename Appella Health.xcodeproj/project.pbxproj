@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C84D878A3B18A5B6758D922 /* Pods_Appella_Health.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E45EFF904329191EEE1F0A /* Pods_Appella_Health.framework */; };
+		45094C242076C2AF00CBD73B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45094C232076C2AF00CBD73B /* NotificationService.swift */; };
+		45094C282076C2AF00CBD73B /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 45094C212076C2AF00CBD73B /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		45094C2E2076CAA200CBD73B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45094C2D2076CAA200CBD73B /* ErrorHandler.swift */; };
+		45094C312076CC1400CBD73B /* InvalidToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45094C302076CC1400CBD73B /* InvalidToken.swift */; };
+		45094C332076D11800CBD73B /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45094C322076D11800CBD73B /* Logout.swift */; };
 		4520FA56206A5924006FF6A4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4520FA55206A5924006FF6A4 /* Register.storyboard */; };
 		4520FA59206A596A006FF6A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA58206A596A006FF6A4 /* RegisterViewController.swift */; };
 		4520FA5C206A5D3F006FF6A4 /* AppellaHealthColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA5B206A5D3F006FF6A4 /* AppellaHealthColors.swift */; };
@@ -15,6 +21,33 @@
 		4520FA63206A81FC006FF6A4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA62206A81FC006FF6A4 /* ForgotPasswordViewController.swift */; };
 		4520FA65206A8257006FF6A4 /* BlueNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA64206A8257006FF6A4 /* BlueNavigationBar.swift */; };
 		4520FA67206A85CB006FF6A4 /* ForgotPasswordKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA66206A85CB006FF6A4 /* ForgotPasswordKitchen.swift */; };
+		452EB43B206D899A000EFD96 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB43A206D899A000EFD96 /* MainView.swift */; };
+		452EB43D206D8D59000EFD96 /* MainViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB43C206D8D59000EFD96 /* MainViewState.swift */; };
+		452EB440206D8D9B000EFD96 /* MainViewStateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB43F206D8D9B000EFD96 /* MainViewStateFactory.swift */; };
+		452EB442206D8E94000EFD96 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB441206D8E94000EFD96 /* ArticleViewModel.swift */; };
+		452EB4442070465A000EFD96 /* AppellaHealthDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB4432070465A000EFD96 /* AppellaHealthDateFormatter.swift */; };
+		452EB4472070F8D7000EFD96 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB4462070F8D7000EFD96 /* ArticleViewController.swift */; };
+		452EB4492070F904000EFD96 /* ArticleKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB4482070F904000EFD96 /* ArticleKitchen.swift */; };
+		452EB44B207106EB000EFD96 /* ArticleViewStateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB44A207106EB000EFD96 /* ArticleViewStateFactory.swift */; };
+		452EB44E2071072B000EFD96 /* ArticleViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB44D2071072B000EFD96 /* ArticleViewState.swift */; };
+		452EB45020712DF7000EFD96 /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452EB44F20712DF7000EFD96 /* Article.storyboard */; };
+		452EB45220712E15000EFD96 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB45120712E15000EFD96 /* ArticleView.swift */; };
+		452EB4592071366A000EFD96 /* ArticleSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB4572071366A000EFD96 /* ArticleSectionHeader.swift */; };
+		452EB45A2071366A000EFD96 /* ArticleSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452EB4582071366A000EFD96 /* ArticleSectionHeader.xib */; };
+		452EB45D20718072000EFD96 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452EB45C20718072000EFD96 /* Gallery.storyboard */; };
+		452EB460207180D2000EFD96 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB45F207180D2000EFD96 /* GalleryViewController.swift */; };
+		452EB46320718102000EFD96 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB46220718102000EFD96 /* GalleryView.swift */; };
+		452EB46520721CBB000EFD96 /* GalleryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB46420721CBB000EFD96 /* GalleryViewState.swift */; };
+		452EB46920721D81000EFD96 /* GalleryViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB46720721D81000EFD96 /* GalleryViewCollectionViewCell.swift */; };
+		452EB46A20721D81000EFD96 /* GalleryViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452EB46820721D81000EFD96 /* GalleryViewCollectionViewCell.xib */; };
+		452EB46C2072257F000EFD96 /* GalleryKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB46B2072257F000EFD96 /* GalleryKitchen.swift */; };
+		452EB46E2072264C000EFD96 /* GalleryViewStateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB46D2072264C000EFD96 /* GalleryViewStateFactory.swift */; };
+		452EB470207263C6000EFD96 /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452EB46F207263C6000EFD96 /* Photo.storyboard */; };
+		452EB473207265F9000EFD96 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB472207265F9000EFD96 /* PhotoViewController.swift */; };
+		456EE3472072D1760088D8A9 /* ArticleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456EE3452072D1760088D8A9 /* ArticleMainTableViewCell.swift */; };
+		456EE3482072D1760088D8A9 /* ArticleMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456EE3462072D1760088D8A9 /* ArticleMainTableViewCell.xib */; };
+		456EE34A20738B8C0088D8A9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456EE34920738B8C0088D8A9 /* UserInfo.swift */; };
+		456EE34D2073A6650088D8A9 /* ArticleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456EE34C2073A6650088D8A9 /* ArticleConverter.swift */; };
 		4576B32E206987EA00839269 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B32D206987EA00839269 /* MainAssembly.swift */; };
 		4576B330206988C700839269 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B32F206988C700839269 /* BaseViewController.swift */; };
 		4576B332206988FD00839269 /* LoginKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B331206988FD00839269 /* LoginKitchen.swift */; };
@@ -62,18 +95,52 @@
 		459B1D62206BD88B00954B5B /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D60206BD88B00954B5B /* AccountTableViewCell.swift */; };
 		459B1D63206BD88B00954B5B /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D61206BD88B00954B5B /* AccountTableViewCell.xib */; };
 		459B1D65206BED5300954B5B /* AccountKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D64206BED5300954B5B /* AccountKitchen.swift */; };
-		459B1D68206BFA4500954B5B /* NotificationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D67206BFA4500954B5B /* NotificationStatus.swift */; };
 		459B1D6B206C0A6400954B5B /* PrivacyPolicy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459B1D6A206C0A6400954B5B /* PrivacyPolicy.storyboard */; };
 		459B1D6E206C0C7400954B5B /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D6D206C0C7400954B5B /* PrivacyPolicyViewController.swift */; };
 		459B1D70206C0CA600954B5B /* PrivacyPolicyKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D6F206C0CA600954B5B /* PrivacyPolicyKitchen.swift */; };
-		459B1D73206C12E700954B5B /* PageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D72206C12E700954B5B /* PageResponse.swift */; };
+		459B1D73206C12E700954B5B /* PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D72206C12E700954B5B /* PrivacyPolicy.swift */; };
 		459B1D75206C1A4200954B5B /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D74206C1A4200954B5B /* UINavigationBar+Extensions.swift */; };
 		459B1D77206C1A8F00954B5B /* CAGradientLayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D76206C1A8F00954B5B /* CAGradientLayer+Extensions.swift */; };
 		459B1D79206C206400954B5B /* AddLabelToRightBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B1D78206C206400954B5B /* AddLabelToRightBarItem.swift */; };
-		CBCF60E9889BC8FDD09B7544 /* Pods_Appella_Health.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBF0D296BDDBFD8E2736601 /* Pods_Appella_Health.framework */; };
+		45BD370F2079F4F60031A978 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BD370E2079F4F60031A978 /* DeviceInfo.swift */; };
+		56B03A3F81AE806C6202D5CC /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEED5A09BA954D095C6808B /* Pods_OneSignalNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		45094C262076C2AF00CBD73B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 458BBB5B20697FAD00F32C99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45094C202076C2AF00CBD73B;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45094C2C2076C2AF00CBD73B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				45094C282076C2AF00CBD73B /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0835E132830C3DCE2BA88B13 /* Pods-Appella Health.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appella Health.release.xcconfig"; path = "Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health.release.xcconfig"; sourceTree = "<group>"; };
+		2C01169C63CE1C489F51AB9D /* Pods-Appella Health.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appella Health.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health.debug.xcconfig"; sourceTree = "<group>"; };
+		35E45EFF904329191EEE1F0A /* Pods_Appella_Health.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Appella_Health.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4080911E2078048300A26BC7 /* Appella Health.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Appella Health.entitlements"; sourceTree = "<group>"; };
+		45094C212076C2AF00CBD73B /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		45094C232076C2AF00CBD73B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		45094C252076C2AF00CBD73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45094C2D2076CAA200CBD73B /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		45094C302076CC1400CBD73B /* InvalidToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidToken.swift; sourceTree = "<group>"; };
+		45094C322076D11800CBD73B /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		4520FA55206A5924006FF6A4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		4520FA58206A596A006FF6A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4520FA5B206A5D3F006FF6A4 /* AppellaHealthColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppellaHealthColors.swift; sourceTree = "<group>"; };
@@ -82,6 +149,33 @@
 		4520FA62206A81FC006FF6A4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		4520FA64206A8257006FF6A4 /* BlueNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueNavigationBar.swift; sourceTree = "<group>"; };
 		4520FA66206A85CB006FF6A4 /* ForgotPasswordKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordKitchen.swift; sourceTree = "<group>"; };
+		452EB43A206D899A000EFD96 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		452EB43C206D8D59000EFD96 /* MainViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewState.swift; sourceTree = "<group>"; };
+		452EB43F206D8D9B000EFD96 /* MainViewStateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewStateFactory.swift; sourceTree = "<group>"; };
+		452EB441206D8E94000EFD96 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		452EB4432070465A000EFD96 /* AppellaHealthDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppellaHealthDateFormatter.swift; sourceTree = "<group>"; };
+		452EB4462070F8D7000EFD96 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		452EB4482070F904000EFD96 /* ArticleKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleKitchen.swift; sourceTree = "<group>"; };
+		452EB44A207106EB000EFD96 /* ArticleViewStateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewStateFactory.swift; sourceTree = "<group>"; };
+		452EB44D2071072B000EFD96 /* ArticleViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewState.swift; sourceTree = "<group>"; };
+		452EB44F20712DF7000EFD96 /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
+		452EB45120712E15000EFD96 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		452EB4572071366A000EFD96 /* ArticleSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSectionHeader.swift; sourceTree = "<group>"; };
+		452EB4582071366A000EFD96 /* ArticleSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleSectionHeader.xib; sourceTree = "<group>"; };
+		452EB45C20718072000EFD96 /* Gallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
+		452EB45F207180D2000EFD96 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		452EB46220718102000EFD96 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		452EB46420721CBB000EFD96 /* GalleryViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewState.swift; sourceTree = "<group>"; };
+		452EB46720721D81000EFD96 /* GalleryViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		452EB46820721D81000EFD96 /* GalleryViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		452EB46B2072257F000EFD96 /* GalleryKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryKitchen.swift; sourceTree = "<group>"; };
+		452EB46D2072264C000EFD96 /* GalleryViewStateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewStateFactory.swift; sourceTree = "<group>"; };
+		452EB46F207263C6000EFD96 /* Photo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photo.storyboard; sourceTree = "<group>"; };
+		452EB472207265F9000EFD96 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		456EE3452072D1760088D8A9 /* ArticleMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleMainTableViewCell.swift; sourceTree = "<group>"; };
+		456EE3462072D1760088D8A9 /* ArticleMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleMainTableViewCell.xib; sourceTree = "<group>"; };
+		456EE34920738B8C0088D8A9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		456EE34C2073A6650088D8A9 /* ArticleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleConverter.swift; sourceTree = "<group>"; };
 		4576B32D206987EA00839269 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		4576B32F206988C700839269 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4576B331206988FD00839269 /* LoginKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginKitchen.swift; sourceTree = "<group>"; };
@@ -131,31 +225,57 @@
 		459B1D60206BD88B00954B5B /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		459B1D61206BD88B00954B5B /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		459B1D64206BED5300954B5B /* AccountKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountKitchen.swift; sourceTree = "<group>"; };
-		459B1D67206BFA4500954B5B /* NotificationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStatus.swift; sourceTree = "<group>"; };
 		459B1D6A206C0A6400954B5B /* PrivacyPolicy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyPolicy.storyboard; sourceTree = "<group>"; };
 		459B1D6D206C0C7400954B5B /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		459B1D6F206C0CA600954B5B /* PrivacyPolicyKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyKitchen.swift; sourceTree = "<group>"; };
-		459B1D72206C12E700954B5B /* PageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageResponse.swift; sourceTree = "<group>"; };
+		459B1D72206C12E700954B5B /* PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicy.swift; sourceTree = "<group>"; };
 		459B1D74206C1A4200954B5B /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
 		459B1D76206C1A8F00954B5B /* CAGradientLayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Extensions.swift"; sourceTree = "<group>"; };
 		459B1D78206C206400954B5B /* AddLabelToRightBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLabelToRightBarItem.swift; sourceTree = "<group>"; };
-		5EBF0D296BDDBFD8E2736601 /* Pods_Appella_Health.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Appella_Health.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		68B2F0C2D0F262E31E8618AE /* Pods-Appella Health.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appella Health.release.xcconfig"; path = "Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health.release.xcconfig"; sourceTree = "<group>"; };
-		C292C25F00C6368C894D5531 /* Pods-Appella Health.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appella Health.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health.debug.xcconfig"; sourceTree = "<group>"; };
+		45BD370E2079F4F60031A978 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		7EEED5A09BA954D095C6808B /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA65BFA0E6F502BA80AA4568 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		C78600428C3519BADE01DE62 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		45094C1E2076C2AF00CBD73B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B03A3F81AE806C6202D5CC /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458BBB6020697FAD00F32C99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBCF60E9889BC8FDD09B7544 /* Pods_Appella_Health.framework in Frameworks */,
+				0C84D878A3B18A5B6758D922 /* Pods_Appella_Health.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45094C222076C2AF00CBD73B /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				45094C232076C2AF00CBD73B /* NotificationService.swift */,
+				45094C252076C2AF00CBD73B /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		45094C2F2076CBF900CBD73B /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				45094C2D2076CAA200CBD73B /* ErrorHandler.swift */,
+				45094C302076CC1400CBD73B /* InvalidToken.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		4520FA57206A5954006FF6A4 /* RegisterController */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +303,94 @@
 				4520FA66206A85CB006FF6A4 /* ForgotPasswordKitchen.swift */,
 			);
 			path = ForgotPasswordController;
+			sourceTree = "<group>";
+		};
+		452EB43E206D8D7B000EFD96 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				459B1D42206BB27C00954B5B /* MainControllerTableViewCells */,
+				452EB43A206D899A000EFD96 /* MainView.swift */,
+				452EB43C206D8D59000EFD96 /* MainViewState.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		452EB4452070F8BC000EFD96 /* ArticleController */ = {
+			isa = PBXGroup;
+			children = (
+				452EB44C2071071E000EFD96 /* ArticleView */,
+				452EB4462070F8D7000EFD96 /* ArticleViewController.swift */,
+				452EB4482070F904000EFD96 /* ArticleKitchen.swift */,
+				452EB44A207106EB000EFD96 /* ArticleViewStateFactory.swift */,
+			);
+			path = ArticleController;
+			sourceTree = "<group>";
+		};
+		452EB44C2071071E000EFD96 /* ArticleView */ = {
+			isa = PBXGroup;
+			children = (
+				456EE3442072D1480088D8A9 /* ArticleMainTableViewCell */,
+				452EB453207135AA000EFD96 /* ArticleTableViewSectionHeader */,
+				452EB44D2071072B000EFD96 /* ArticleViewState.swift */,
+				452EB45120712E15000EFD96 /* ArticleView.swift */,
+			);
+			path = ArticleView;
+			sourceTree = "<group>";
+		};
+		452EB453207135AA000EFD96 /* ArticleTableViewSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				452EB4572071366A000EFD96 /* ArticleSectionHeader.swift */,
+				452EB4582071366A000EFD96 /* ArticleSectionHeader.xib */,
+			);
+			path = ArticleTableViewSectionHeader;
+			sourceTree = "<group>";
+		};
+		452EB45E207180BD000EFD96 /* GalleryController */ = {
+			isa = PBXGroup;
+			children = (
+				452EB461207180F1000EFD96 /* GalleryView */,
+				452EB45F207180D2000EFD96 /* GalleryViewController.swift */,
+				452EB46B2072257F000EFD96 /* GalleryKitchen.swift */,
+			);
+			path = GalleryController;
+			sourceTree = "<group>";
+		};
+		452EB461207180F1000EFD96 /* GalleryView */ = {
+			isa = PBXGroup;
+			children = (
+				452EB46620721D66000EFD96 /* GalleryViewCollectionViewCell */,
+				452EB46220718102000EFD96 /* GalleryView.swift */,
+				452EB46420721CBB000EFD96 /* GalleryViewState.swift */,
+				452EB46D2072264C000EFD96 /* GalleryViewStateFactory.swift */,
+			);
+			path = GalleryView;
+			sourceTree = "<group>";
+		};
+		452EB46620721D66000EFD96 /* GalleryViewCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				452EB46720721D81000EFD96 /* GalleryViewCollectionViewCell.swift */,
+				452EB46820721D81000EFD96 /* GalleryViewCollectionViewCell.xib */,
+			);
+			path = GalleryViewCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		452EB471207265D7000EFD96 /* PhotoController */ = {
+			isa = PBXGroup;
+			children = (
+				452EB472207265F9000EFD96 /* PhotoViewController.swift */,
+			);
+			path = PhotoController;
+			sourceTree = "<group>";
+		};
+		456EE3442072D1480088D8A9 /* ArticleMainTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				456EE3452072D1760088D8A9 /* ArticleMainTableViewCell.swift */,
+				456EE3462072D1760088D8A9 /* ArticleMainTableViewCell.xib */,
+			);
+			path = ArticleMainTableViewCell;
 			sourceTree = "<group>";
 		};
 		4576B32C206987DD00839269 /* Foundation */ = {
@@ -222,8 +430,9 @@
 				4576B34B2069A36A00839269 /* Response.swift */,
 				459B1D2F206AD07D00954B5B /* ArticleCategory.swift */,
 				459B1D40206BAFE300954B5B /* Article.swift */,
-				459B1D67206BFA4500954B5B /* NotificationStatus.swift */,
-				459B1D72206C12E700954B5B /* PageResponse.swift */,
+				459B1D72206C12E700954B5B /* PrivacyPolicy.swift */,
+				452EB441206D8E94000EFD96 /* ArticleViewModel.swift */,
+				456EE34920738B8C0088D8A9 /* UserInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,9 +454,10 @@
 			isa = PBXGroup;
 			children = (
 				458BBB6520697FAD00F32C99 /* Appella Health */,
+				45094C222076C2AF00CBD73B /* OneSignalNotificationServiceExtension */,
 				458BBB6420697FAD00F32C99 /* Products */,
-				82A2081A35B2602E80F43043 /* Pods */,
-				FDE599EAEE254C3A10AA379D /* Frameworks */,
+				CD424D8059F85E6203B95A9B /* Pods */,
+				C8B89A1C22F20CDDA84055B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				458BBB6320697FAD00F32C99 /* Appella Health.app */,
+				45094C212076C2AF00CBD73B /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +473,8 @@
 		458BBB6520697FAD00F32C99 /* Appella Health */ = {
 			isa = PBXGroup;
 			children = (
+				45094C2F2076CBF900CBD73B /* Errors */,
+				4080911E2078048300A26BC7 /* Appella Health.entitlements */,
 				459B1D53206BC1AA00954B5B /* Helpers */,
 				4520FA5A206A5D31006FF6A4 /* Style */,
 				4576B34820699AED00839269 /* Extensions */,
@@ -299,6 +512,9 @@
 				459B1D4E206BBB7800954B5B /* HelpDesk.storyboard */,
 				459B1D5B206BD68300954B5B /* Account.storyboard */,
 				459B1D6A206C0A6400954B5B /* PrivacyPolicy.storyboard */,
+				452EB44F20712DF7000EFD96 /* Article.storyboard */,
+				452EB45C20718072000EFD96 /* Gallery.storyboard */,
+				452EB46F207263C6000EFD96 /* Photo.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -306,6 +522,9 @@
 		458BBB7A20697FCE00F32C99 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				452EB471207265D7000EFD96 /* PhotoController */,
+				452EB45E207180BD000EFD96 /* GalleryController */,
+				452EB4452070F8BC000EFD96 /* ArticleController */,
 				459B1D6C206C0C5800954B5B /* PrivacyPolicyController */,
 				459B1D5A206BD66C00954B5B /* AccountController */,
 				459B1D50206BBB8900954B5B /* HelpDeskController */,
@@ -348,9 +567,10 @@
 		459B1D27206AC90F00954B5B /* MainController */ = {
 			isa = PBXGroup;
 			children = (
-				459B1D42206BB27C00954B5B /* MainControllerTableViewCells */,
+				452EB43E206D8D7B000EFD96 /* MainView */,
 				459B1D28206AC91900954B5B /* MainViewController.swift */,
 				459B1D3E206B9CC400954B5B /* MainKitchen.swift */,
+				452EB43F206D8D9B000EFD96 /* MainViewStateFactory.swift */,
 			);
 			path = MainController;
 			sourceTree = "<group>";
@@ -413,6 +633,10 @@
 			isa = PBXGroup;
 			children = (
 				459B1D54206BC1C300954B5B /* PhoneCaller.swift */,
+				452EB4432070465A000EFD96 /* AppellaHealthDateFormatter.swift */,
+				456EE34C2073A6650088D8A9 /* ArticleConverter.swift */,
+				45094C322076D11800CBD73B /* Logout.swift */,
+				45BD370E2079F4F60031A978 /* DeviceInfo.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -445,40 +669,64 @@
 			path = PrivacyPolicyController;
 			sourceTree = "<group>";
 		};
-		82A2081A35B2602E80F43043 /* Pods */ = {
+		C8B89A1C22F20CDDA84055B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C292C25F00C6368C894D5531 /* Pods-Appella Health.debug.xcconfig */,
-				68B2F0C2D0F262E31E8618AE /* Pods-Appella Health.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		FDE599EAEE254C3A10AA379D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5EBF0D296BDDBFD8E2736601 /* Pods_Appella_Health.framework */,
+				35E45EFF904329191EEE1F0A /* Pods_Appella_Health.framework */,
+				7EEED5A09BA954D095C6808B /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD424D8059F85E6203B95A9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C01169C63CE1C489F51AB9D /* Pods-Appella Health.debug.xcconfig */,
+				0835E132830C3DCE2BA88B13 /* Pods-Appella Health.release.xcconfig */,
+				AA65BFA0E6F502BA80AA4568 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				C78600428C3519BADE01DE62 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		458BBB6220697FAD00F32C99 /* Appella Health */ = {
+		45094C202076C2AF00CBD73B /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 458BBB7520697FAD00F32C99 /* Build configuration list for PBXNativeTarget "Appella Health" */;
+			buildConfigurationList = 45094C2B2076C2AF00CBD73B /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				6C754864708F79BAEF8A38EC /* [CP] Check Pods Manifest.lock */,
-				458BBB5F20697FAD00F32C99 /* Sources */,
-				458BBB6020697FAD00F32C99 /* Frameworks */,
-				458BBB6120697FAD00F32C99 /* Resources */,
-				1424452E23BD50832993D6FE /* [CP] Embed Pods Frameworks */,
-				AF9834DFE5711D0C3ED40E58 /* [CP] Copy Pods Resources */,
+				C68C869FE4E01B67E6265F0B /* [CP] Check Pods Manifest.lock */,
+				45094C1D2076C2AF00CBD73B /* Sources */,
+				45094C1E2076C2AF00CBD73B /* Frameworks */,
+				45094C1F2076C2AF00CBD73B /* Resources */,
+				8BB447563222EB851CDA8445 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 45094C212076C2AF00CBD73B /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		458BBB6220697FAD00F32C99 /* Appella Health */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 458BBB7520697FAD00F32C99 /* Build configuration list for PBXNativeTarget "Appella Health" */;
+			buildPhases = (
+				96233EC1B56DD0575878A87B /* [CP] Check Pods Manifest.lock */,
+				458BBB5F20697FAD00F32C99 /* Sources */,
+				458BBB6020697FAD00F32C99 /* Frameworks */,
+				458BBB6120697FAD00F32C99 /* Resources */,
+				45094C2C2076C2AF00CBD73B /* Embed App Extensions */,
+				B20A5F41D90C910CD8FCA2D3 /* [CP] Embed Pods Frameworks */,
+				411A4DA7F905C6BD18C80EEF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45094C272076C2AF00CBD73B /* PBXTargetDependency */,
 			);
 			name = "Appella Health";
 			productName = "Appella Health";
@@ -492,12 +740,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = VladOS;
 				TargetAttributes = {
+					45094C202076C2AF00CBD73B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					458BBB6220697FAD00F32C99 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -515,11 +772,19 @@
 			projectRoot = "";
 			targets = (
 				458BBB6220697FAD00F32C99 /* Appella Health */,
+				45094C202076C2AF00CBD73B /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		45094C1F2076C2AF00CBD73B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458BBB6120697FAD00F32C99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,6 +793,7 @@
 				459B1D4C206BB5B000954B5B /* MainViewSmallTableViewCell.xib in Resources */,
 				458BBB7120697FAD00F32C99 /* LaunchScreen.storyboard in Resources */,
 				459B1D4F206BBB7800954B5B /* HelpDesk.storyboard in Resources */,
+				452EB470207263C6000EFD96 /* Photo.storyboard in Resources */,
 				4576B352206A388E00839269 /* localizable.strings in Resources */,
 				458BBB6E20697FAD00F32C99 /* Assets.xcassets in Resources */,
 				458BBB7E2069800700F32C99 /* Login.storyboard in Resources */,
@@ -535,8 +801,13 @@
 				4520FA60206A804E006FF6A4 /* ForgotPassword.storyboard in Resources */,
 				4520FA56206A5924006FF6A4 /* Register.storyboard in Resources */,
 				459B1D63206BD88B00954B5B /* AccountTableViewCell.xib in Resources */,
+				452EB45A2071366A000EFD96 /* ArticleSectionHeader.xib in Resources */,
+				456EE3482072D1760088D8A9 /* ArticleMainTableViewCell.xib in Resources */,
 				459B1D39206AD3F700954B5B /* SideMenuTableViewCell.xib in Resources */,
 				459B1D5C206BD68300954B5B /* Account.storyboard in Resources */,
+				452EB46A20721D81000EFD96 /* GalleryViewCollectionViewCell.xib in Resources */,
+				452EB45020712DF7000EFD96 /* Article.storyboard in Resources */,
+				452EB45D20718072000EFD96 /* Gallery.storyboard in Resources */,
 				459B1D47206BB2B400954B5B /* MainViewLargeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,39 +815,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1424452E23BD50832993D6FE /* [CP] Embed Pods Frameworks */ = {
+		411A4DA7F905C6BD18C80EEF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6C754864708F79BAEF8A38EC /* [CP] Check Pods Manifest.lock */ = {
+		8BB447563222EB851CDA8445 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96233EC1B56DD0575878A87B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -594,30 +863,77 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AF9834DFE5711D0C3ED40E58 /* [CP] Copy Pods Resources */ = {
+		B20A5F41D90C910CD8FCA2D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Appella Health/Pods-Appella Health-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C68C869FE4E01B67E6265F0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		45094C1D2076C2AF00CBD73B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45094C242076C2AF00CBD73B /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		458BBB5F20697FAD00F32C99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4576B357206A39F600839269 /* String+Extensions.swift in Sources */,
+				45094C332076D11800CBD73B /* Logout.swift in Sources */,
 				459B1D75206C1A4200954B5B /* UINavigationBar+Extensions.swift in Sources */,
+				452EB46E2072264C000EFD96 /* GalleryViewStateFactory.swift in Sources */,
 				4576B32E206987EA00839269 /* MainAssembly.swift in Sources */,
 				4576B34A20699AFB00839269 /* UserDefaults+Extensions.swift in Sources */,
 				4576B3382069891500839269 /* KitchenDelegate.swift in Sources */,
@@ -628,24 +944,39 @@
 				4576B34C2069A36A00839269 /* Response.swift in Sources */,
 				459B1D77206C1A8F00954B5B /* CAGradientLayer+Extensions.swift in Sources */,
 				459B1D59206BD1C800954B5B /* RemoveBackButtonTitle.swift in Sources */,
+				452EB44B207106EB000EFD96 /* ArticleViewStateFactory.swift in Sources */,
 				459B1D4B206BB5B000954B5B /* MainViewSmallTableViewCell.swift in Sources */,
+				452EB43B206D899A000EFD96 /* MainView.swift in Sources */,
+				452EB460207180D2000EFD96 /* GalleryViewController.swift in Sources */,
+				45094C312076CC1400CBD73B /* InvalidToken.swift in Sources */,
+				452EB473207265F9000EFD96 /* PhotoViewController.swift in Sources */,
+				452EB46920721D81000EFD96 /* GalleryViewCollectionViewCell.swift in Sources */,
 				458BBB6720697FAD00F32C99 /* AppDelegate.swift in Sources */,
 				4520FA63206A81FC006FF6A4 /* ForgotPasswordViewController.swift in Sources */,
 				459B1D30206AD07D00954B5B /* ArticleCategory.swift in Sources */,
 				4520FA65206A8257006FF6A4 /* BlueNavigationBar.swift in Sources */,
+				452EB442206D8E94000EFD96 /* ArticleViewModel.swift in Sources */,
+				452EB440206D8D9B000EFD96 /* MainViewStateFactory.swift in Sources */,
 				459B1D41206BAFE300954B5B /* Article.swift in Sources */,
 				4576B33C2069899D00839269 /* LoginViewState.swift in Sources */,
-				459B1D73206C12E700954B5B /* PageResponse.swift in Sources */,
+				452EB4442070465A000EFD96 /* AppellaHealthDateFormatter.swift in Sources */,
+				452EB46520721CBB000EFD96 /* GalleryViewState.swift in Sources */,
+				456EE3472072D1760088D8A9 /* ArticleMainTableViewCell.swift in Sources */,
+				459B1D73206C12E700954B5B /* PrivacyPolicy.swift in Sources */,
 				459B1D70206C0CA600954B5B /* PrivacyPolicyKitchen.swift in Sources */,
 				458BBB85206986DB00F32C99 /* AppellaHealthApplication.swift in Sources */,
 				459B1D46206BB2B400954B5B /* MainViewLargeTableViewCell.swift in Sources */,
+				452EB4472070F8D7000EFD96 /* ArticleViewController.swift in Sources */,
 				459B1D3D206B98C600954B5B /* SideMenuKitchen.swift in Sources */,
 				459B1D38206AD3F700954B5B /* SideMenuTableViewCell.swift in Sources */,
 				4520FA59206A596A006FF6A4 /* RegisterViewController.swift in Sources */,
 				4576B33A2069891500839269 /* Optional+AppellaHealth.swift in Sources */,
+				452EB44E2071072B000EFD96 /* ArticleViewState.swift in Sources */,
+				452EB46320718102000EFD96 /* GalleryView.swift in Sources */,
 				459B1D6E206C0C7400954B5B /* PrivacyPolicyViewController.swift in Sources */,
 				4576B34220698C6800839269 /* AlamofireNetworkManager.swift in Sources */,
 				459B1D3F206B9CC400954B5B /* MainKitchen.swift in Sources */,
+				452EB43D206D8D59000EFD96 /* MainViewState.swift in Sources */,
 				459B1D52206BBC5500954B5B /* HelpDeskViewController.swift in Sources */,
 				459B1D5E206BD6BA00954B5B /* AccountViewController.swift in Sources */,
 				4576B345206992F300839269 /* User.swift in Sources */,
@@ -657,18 +988,33 @@
 				4576B3372069891500839269 /* Kitchen.swift in Sources */,
 				459B1D65206BED5300954B5B /* AccountKitchen.swift in Sources */,
 				4520FA5C206A5D3F006FF6A4 /* AppellaHealthColors.swift in Sources */,
+				456EE34A20738B8C0088D8A9 /* UserInfo.swift in Sources */,
+				45094C2E2076CAA200CBD73B /* ErrorHandler.swift in Sources */,
 				459B1D29206AC91900954B5B /* MainViewController.swift in Sources */,
+				452EB46C2072257F000EFD96 /* GalleryKitchen.swift in Sources */,
 				4576B33E20698AA900839269 /* AppContract.swift in Sources */,
+				456EE34D2073A6650088D8A9 /* ArticleConverter.swift in Sources */,
+				452EB4492070F904000EFD96 /* ArticleKitchen.swift in Sources */,
 				4576B330206988C700839269 /* BaseViewController.swift in Sources */,
 				459B1D62206BD88B00954B5B /* AccountTableViewCell.swift in Sources */,
+				452EB45220712E15000EFD96 /* ArticleView.swift in Sources */,
 				459B1D57206BC96100954B5B /* UIStoryboard+Extensions.swift in Sources */,
 				459B1D55206BC1C300954B5B /* PhoneCaller.swift in Sources */,
-				459B1D68206BFA4500954B5B /* NotificationStatus.swift in Sources */,
 				459B1D79206C206400954B5B /* AddLabelToRightBarItem.swift in Sources */,
+				452EB4592071366A000EFD96 /* ArticleSectionHeader.swift in Sources */,
+				45BD370F2079F4F60031A978 /* DeviceInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45094C272076C2AF00CBD73B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45094C202076C2AF00CBD73B /* OneSignalNotificationServiceExtension */;
+			targetProxy = 45094C262076C2AF00CBD73B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		458BBB6F20697FAD00F32C99 /* LaunchScreen.storyboard */ = {
@@ -682,6 +1028,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		45094C292076C2AF00CBD73B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA65BFA0E6F502BA80AA4568 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9S824GTX6A;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.appllahealth.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45094C2A2076C2AF00CBD73B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C78600428C3519BADE01DE62 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9S824GTX6A;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.appllahealth.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		458BBB7320697FAD00F32C99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -696,6 +1074,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -703,6 +1082,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -730,7 +1110,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -753,6 +1133,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -760,6 +1141,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -781,7 +1163,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -791,14 +1173,17 @@
 		};
 		458BBB7620697FAD00F32C99 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C292C25F00C6368C894D5531 /* Pods-Appella Health.debug.xcconfig */;
+			baseConfigurationReference = 2C01169C63CE1C489F51AB9D /* Pods-Appella Health.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Appella Health/Appella Health.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DCX4J53M3H;
+				DEVELOPMENT_TEAM = 9S824GTX6A;
 				INFOPLIST_FILE = "Appella Health/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vlados.Appella-Health";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.appllahealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -807,14 +1192,17 @@
 		};
 		458BBB7720697FAD00F32C99 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68B2F0C2D0F262E31E8618AE /* Pods-Appella Health.release.xcconfig */;
+			baseConfigurationReference = 0835E132830C3DCE2BA88B13 /* Pods-Appella Health.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Appella Health/Appella Health.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DCX4J53M3H;
+				DEVELOPMENT_TEAM = 9S824GTX6A;
 				INFOPLIST_FILE = "Appella Health/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vlados.Appella-Health";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.appllahealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -824,6 +1212,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		45094C2B2076C2AF00CBD73B /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45094C292076C2AF00CBD73B /* Debug */,
+				45094C2A2076C2AF00CBD73B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		458BBB5E20697FAD00F32C99 /* Build configuration list for PBXProject "Appella Health" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

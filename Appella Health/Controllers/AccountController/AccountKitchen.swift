@@ -39,7 +39,7 @@ class AccountKitchen: Kitchen {
         case .viewWillAppear:
             getNotificationStatus()
         case .didLogout:
-            UserDefaults.setUserId(nil)
+            didLogout()
         case .didSwitchReceiveNotificationsStatus(let status):
             switchNotificationsStatus(status)
         }
@@ -47,11 +47,7 @@ class AccountKitchen: Kitchen {
     
     func getNotificationStatus() {
         delegate?.perform(.startLoading)
-        guard let userId = UserDefaults.getUserId() else {
-            delegate?.perform(.logout)
-            return
-        }
-        networkManager.getNotificationsStatus(userId: userId).onSuccess { [weak self] status in
+        networkManager.getNotificationsStatus().onSuccess { [weak self] status in
             guard let _self = self else {
                 return
             }
@@ -61,6 +57,10 @@ class AccountKitchen: Kitchen {
             guard let _self = self else {
                 return
             }
+            if error.error is InvalidTokenError {
+                _self.delegate?.perform(.logout)
+                return
+            }
             _self.delegate?.perform(.finishLoading)
             _self.delegate?.perform(.errorHappend(error: error.message))
         }
@@ -68,11 +68,7 @@ class AccountKitchen: Kitchen {
     
     func switchNotificationsStatus(_ send: Bool) {
         delegate?.perform(.startLoading)
-        guard let userId = UserDefaults.getUserId() else {
-            delegate?.perform(.logout)
-            return
-        }
-        networkManager.switchNotificationStatus(userId: userId, status: send).onSuccess { [weak self] message in
+        networkManager.switchNotificationStatus(status: send).onSuccess { [weak self] message in
             guard let _self = self else {
                 return
             }
@@ -82,8 +78,17 @@ class AccountKitchen: Kitchen {
             guard let _self = self else {
                 return
             }
+            if error.error is InvalidTokenError {
+                _self.delegate?.perform(.logout)
+                return
+            }
             _self.delegate?.perform(.finishLoading)
             _self.delegate?.perform(.errorHappend(error: error.message))
         }
+    }
+    
+    private func didLogout() {
+        networkManager.switchNotificationStatus(status: false)
+        UserDefaults.setApiKey(nil)
     }
 }

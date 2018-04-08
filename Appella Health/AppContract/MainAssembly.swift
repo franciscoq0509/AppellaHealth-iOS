@@ -17,8 +17,19 @@ class MainAssembly: Assembly {
         
         //MARK: - Network Manager
         
-        container.register(NetworkManager.self) { _ in
-            return AlamofireNetworkManager()
+        container.register(ErrorHandler.self) { _ in
+            return ErrorHandler()
+        }
+        
+        container.register(NetworkManager.self) { resolver in
+            let errorHandler = resolver.forceResolve(ErrorHandler.self)
+            return AlamofireNetworkManager(errorHandler: errorHandler)
+        }
+        
+        //MARK: - Helpers
+        
+        container.register(ArticleConverter.self) { _ in
+            return ArticleConverter()
         }
         
         //MARK: - Login
@@ -59,16 +70,22 @@ class MainAssembly: Assembly {
         
         //MARK: - Main
         
+        container.register(MainViewStateFactory.self) { resolver in
+            let articleConverter = resolver.forceResolve(ArticleConverter.self)
+            return MainViewStateFactory(articleConverter: articleConverter)
+        }
         container.register(MainKitchen.self) { resolver in
             if self.mainKitchen == nil {
-                self.mainKitchen = MainKitchen()
+                let networkManager = resolver.forceResolve(NetworkManager.self)
+                let mainViewStateFactory = resolver.forceResolve(MainViewStateFactory.self)
+                self.mainKitchen = MainKitchen(networkManager: networkManager, mainViewStateFactory: mainViewStateFactory)
             }
             return self.mainKitchen
         }
         container.storyboardInitCompleted(MainViewController.self) { resolver, controller in
             let mainKitchen = resolver.forceResolve(MainKitchen.self)
             controller.inject(kitchen: mainKitchen)
-            self.mainKitchen.delegate = AnyKitchenDelegate(controller)
+            mainKitchen.delegate = AnyKitchenDelegate(controller)
         }
         
         //MARK: - Side Menu
@@ -106,6 +123,38 @@ class MainAssembly: Assembly {
             let privacyPolicyKitchen = resolver.forceResolve(PrivacyPolicyKitchen.self)
             controller.inject(kitchen: privacyPolicyKitchen)
             privacyPolicyKitchen.delegate = AnyKitchenDelegate(controller)
+        }
+        
+        //MARK: - Article
+        
+        container.register(ArticleViewStateFactory.self) { resolver in
+            let articleConverter = resolver.forceResolve(ArticleConverter.self)
+            return ArticleViewStateFactory(articleConverter: articleConverter)
+        }
+        container.register(ArticleKitchen.self) { resolver in
+            let articleViewStateFactory = resolver.forceResolve(ArticleViewStateFactory.self)
+            let networkManager = resolver.forceResolve(NetworkManager.self)
+            return ArticleKitchen(networkManager: networkManager, articleViewStateFactory: articleViewStateFactory)
+        }
+        container.storyboardInitCompleted(ArticleViewController.self) { resolver, controller in
+            let articleKitchen = resolver.forceResolve(ArticleKitchen.self)
+            controller.inject(kitchen: articleKitchen)
+            articleKitchen.delegate = AnyKitchenDelegate(controller)
+        }
+        
+        //MARK: - Gallery
+        
+        container.register(GalleryViewStateFactory.self) { _ in
+            return GalleryViewStateFactory()
+        }
+        container.register(GalleryKitchen.self) { resolver in
+            let galleryViewStateFactory = resolver.forceResolve(GalleryViewStateFactory.self)
+            return GalleryKitchen(galleryViewStateFactory: galleryViewStateFactory)
+        }
+        container.storyboardInitCompleted(GalleryViewController.self) { resolver, controller in
+            let galleryKitchen = resolver.forceResolve(GalleryKitchen.self)
+            controller.inject(kitchen: galleryKitchen)
+            galleryKitchen.delegate = AnyKitchenDelegate(controller)
         }
     }
 }

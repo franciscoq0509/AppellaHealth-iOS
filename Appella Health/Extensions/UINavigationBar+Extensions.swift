@@ -13,7 +13,14 @@ extension UINavigationBar {
     func setGradientBackground(colors: [UIColor]) {
         
         var updatedFrame = bounds
-        updatedFrame.size.height += 20
+        let deviceInfo = DeviceInfo()
+        switch deviceInfo {
+        case .iPhoneX:
+            updatedFrame.size.height += 44
+        default:
+            updatedFrame.size.height += 20
+        }
+        
         let gradientLayer = CAGradientLayer(frame: updatedFrame, colors: colors)
         
         setBackgroundImage(gradientLayer.createGradientImage(), for: UIBarMetrics.default)

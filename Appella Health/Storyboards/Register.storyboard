@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bmn-39-931">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bmn-39-931">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,9 +20,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="rkb-ZG-huS">
-                                <rect key="frame" x="16" y="252.5" width="343" height="182"/>
+                                <rect key="frame" x="16" y="229" width="343" height="229"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NP-lX-iHT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4NP-lX-iHT">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="3j3-nf-by5"/>
@@ -36,8 +36,22 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Work Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-Fd-2h2">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-iT-Y7m">
                                         <rect key="frame" x="0.0" y="47" width="343" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="reU-cG-BmF"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="name"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Work Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-Fd-2h2">
+                                        <rect key="frame" x="0.0" y="94" width="343" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="pds-OY-gft"/>
                                         </constraints>
@@ -51,7 +65,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-oM-6Ke">
-                                        <rect key="frame" x="0.0" y="94" width="343" height="41"/>
+                                        <rect key="frame" x="0.0" y="141" width="343" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="hZa-Ae-m7B"/>
                                         </constraints>
@@ -65,7 +79,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwE-bx-bRb">
-                                        <rect key="frame" x="0.0" y="141" width="343" height="41"/>
+                                        <rect key="frame" x="0.0" y="188" width="343" height="41"/>
                                         <color key="backgroundColor" red="0.30980392159999998" green="0.56862745100000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="Ctk-mn-d38"/>
@@ -101,7 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logotype" translatesAutoresizingMaskIntoConstraints="NO" id="GC0-cN-cXx">
-                                <rect key="frame" x="67" y="126.5" width="240" height="69"/>
+                                <rect key="frame" x="67" y="103" width="240" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GC0-cN-cXx" secondAttribute="height" multiplier="80:23" id="0FW-17-jie"/>
                                 </constraints>
@@ -109,7 +123,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xeh-eh-hOR" firstAttribute="bottom" secondItem="xgO-9x-sey" secondAttribute="bottom" constant="20" id="1pJ-mv-wX0"/>
+                            <constraint firstAttribute="bottom" secondItem="xgO-9x-sey" secondAttribute="bottom" constant="20" id="1pJ-mv-wX0"/>
                             <constraint firstItem="rkb-ZG-huS" firstAttribute="leading" secondItem="xeh-eh-hOR" secondAttribute="leading" constant="16" id="2er-tf-39e"/>
                             <constraint firstItem="rkb-ZG-huS" firstAttribute="centerY" secondItem="xeh-eh-hOR" secondAttribute="centerY" id="FtN-e7-0Pq"/>
                             <constraint firstItem="GC0-cN-cXx" firstAttribute="centerX" secondItem="xeh-eh-hOR" secondAttribute="centerX" id="NKV-V7-fvz"/>
@@ -123,7 +137,8 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="xb7-Fd-2h2" id="Sja-Ch-lqE"/>
-                        <outlet property="nameTextField" destination="4NP-lX-iHT" id="A0A-92-PQA"/>
+                        <outlet property="firstNameTextField" destination="4NP-lX-iHT" id="3Kb-34-xeS"/>
+                        <outlet property="lastNameTextField" destination="4kW-iT-Y7m" id="bdk-Up-SHt"/>
                         <outlet property="passwordTextField" destination="BhK-oM-6Ke" id="dHT-fc-4sy"/>
                     </connections>
                 </viewController>

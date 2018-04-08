@@ -17,7 +17,8 @@ class RegisterViewController: BaseViewController {
     
     //MARK: - Outlets
     
-    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var firstNameTextField: UITextField!
+    @IBOutlet var lastNameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
@@ -37,8 +38,12 @@ class RegisterViewController: BaseViewController {
     //MARK: - Actions
     
     @IBAction func didTapRegister() {
-        guard let name = nameTextField.text, !name.isEmpty else {
-            SVProgressHUD.showError(withStatus: NSLocalizedString("Enter name", comment: ""))
+        guard let firstName = firstNameTextField.text, !firstName.isEmpty else {
+            SVProgressHUD.showError(withStatus: NSLocalizedString("Enter First Name", comment: ""))
+            return
+        }
+        guard let lastName = lastNameTextField.text, !lastName.isEmpty else {
+            SVProgressHUD.showError(withStatus: NSLocalizedString("Enter Last Name", comment: ""))
             return
         }
         guard let email = emailTextField.text, !email.isEmpty else {
@@ -54,7 +59,7 @@ class RegisterViewController: BaseViewController {
             return
         }
         
-        kitchen.receive(event: .didTapRegister(name: name, email: email, password: password))
+        kitchen.receive(event: .didTapRegister(firstName: firstName, lastName: lastName, email: email, password: password))
     }
     
     @IBAction func didTapCallForAssistance() {

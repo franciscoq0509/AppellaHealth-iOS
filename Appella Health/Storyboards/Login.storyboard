@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cEh-nk-wDt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cEh-nk-wDt">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -122,7 +122,7 @@
                             <constraint firstItem="lge-Qn-Jb7" firstAttribute="centerY" secondItem="055-2s-ner" secondAttribute="centerY" id="0Zx-cV-asQ"/>
                             <constraint firstItem="lge-Qn-Jb7" firstAttribute="top" secondItem="ezv-wU-nJR" secondAttribute="bottom" constant="57" id="2l8-TU-Yjs"/>
                             <constraint firstItem="lge-Qn-Jb7" firstAttribute="leading" secondItem="055-2s-ner" secondAttribute="leading" constant="16" id="DCp-Cd-cKl"/>
-                            <constraint firstItem="055-2s-ner" firstAttribute="bottom" secondItem="7J4-fn-Xgq" secondAttribute="bottom" constant="20" id="DuR-ea-cDA"/>
+                            <constraint firstAttribute="bottom" secondItem="7J4-fn-Xgq" secondAttribute="bottom" constant="20" id="DuR-ea-cDA"/>
                             <constraint firstItem="ezv-wU-nJR" firstAttribute="centerX" secondItem="055-2s-ner" secondAttribute="centerX" id="dfW-pU-6JZ"/>
                             <constraint firstItem="055-2s-ner" firstAttribute="trailing" secondItem="lge-Qn-Jb7" secondAttribute="trailing" constant="16" id="ith-SS-Kmf"/>
                             <constraint firstItem="7J4-fn-Xgq" firstAttribute="centerX" secondItem="055-2s-ner" secondAttribute="centerX" id="kqy-oE-PuA"/>

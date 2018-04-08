@@ -7,29 +7,26 @@
 //
 
 struct UserResponse: Codable {
-    let responseData: UserContainer
-}
-
-struct UserContainer: Codable {
+    let status: ResponseStatus
     let user: User
     
     enum CodingKeys: String, CodingKey {
-        case user = "1"
+        case status
+        case user = "payload"
     }
 }
 
 struct User: Codable {
-    let userId: String
-    let userName: String
+    let firstName: String
+    let lastName: String
     let email: String
-    let password:String
-    let image: String
+    let apiKey: String
     
     enum CodingKeys: String, CodingKey {
-        case userId = "user_id"
-        case userName = "username"
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case apiKey = "api_key"
         case email
-        case password
-        case image
+        
     }
 }

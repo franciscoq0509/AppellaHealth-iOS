@@ -13,8 +13,13 @@ enum MainViewEvent {
 }
 
 enum MainState {
+    case startLoading
+    case finishLoading
+    case articlesLoaded(viewState: MainViewState)
     case openHelpDesk
     case openAccount
+    case errorHappend(error: String)
+    case logout
 }
 
 protocol MainKitchenDelegate: class {
@@ -26,6 +31,14 @@ class MainKitchen: Kitchen {
     typealias Command = MainState
     
     var delegate: AnyKitchenDelegate<Command>?
+    let networkManager: NetworkManager
+    let mainViewStateFactory: MainViewStateFactory
+    var currentCategory: ArticleCategory = .news
+    
+    init(networkManager: NetworkManager, mainViewStateFactory: MainViewStateFactory) {
+        self.networkManager = networkManager
+        self.mainViewStateFactory = mainViewStateFactory
+    }
     
     func receive(event: ViewEvent) {
         switch event {
@@ -34,8 +47,25 @@ class MainKitchen: Kitchen {
         }
     }
     
-    func loadNews(with category: ArticleCategory = .all) {
-        print("ask to load \(category.rawValue)")
+    func loadNews() {
+        delegate?.perform(.startLoading)
+        networkManager.getArticles(category: currentCategory).onSuccess { [weak self] articles in
+            guard let _self = self else {
+                return
+            }
+            _self.delegate?.perform(.finishLoading)
+            _self.delegate?.perform(.articlesLoaded(viewState: _self.mainViewStateFactory.make(articles)))
+        }.onFailure { [weak self] error in
+            guard let _self = self else {
+                return
+            }
+            if error.error is InvalidTokenError {
+                _self.delegate?.perform(.logout)
+                return
+            }
+            _self.delegate?.perform(.finishLoading)
+            _self.delegate?.perform(.errorHappend(error: error.message))
+        }
     }
 }
 
@@ -49,7 +79,10 @@ extension MainKitchen: MainKitchenDelegate {
         case .appellaHealth:
             break
         default:
-            loadNews(with: category)
+            if currentCategory != category {
+                currentCategory = category
+                loadNews()
+            }
         }
         
     }

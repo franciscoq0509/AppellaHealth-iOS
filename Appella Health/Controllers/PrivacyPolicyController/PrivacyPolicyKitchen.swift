@@ -17,6 +17,7 @@ enum PrivacyPolicyState {
     case finishLoading
     case textLoaded(text: String)
     case errorHappend(error: String)
+    case logout
 }
 
 class PrivacyPolicyKitchen: Kitchen {
@@ -47,6 +48,10 @@ class PrivacyPolicyKitchen: Kitchen {
             _self.delegate?.perform(.textLoaded(text: text))
         }.onFailure { [weak self] error in
             guard let _self = self else {
+                return
+            }
+            if error.error is InvalidTokenError {
+                _self.delegate?.perform(.logout)
                 return
             }
             _self.delegate?.perform(.finishLoading)

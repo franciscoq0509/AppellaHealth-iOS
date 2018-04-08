@@ -9,15 +9,15 @@
 import Foundation
 
 enum UserDefaultsKeys {
-    static let userId = "userId"
+    static let apiKey = "apiKey"
 }
 
 extension UserDefaults {
-    static func setUserId(_ userId: String?) {
-        UserDefaults.standard.set(userId, forKey: UserDefaultsKeys.userId)
+    static func setApiKey(_ key: String?) {
+        UserDefaults.standard.set(key, forKey: UserDefaultsKeys.apiKey)
     }
     
-    static func getUserId() -> String? {
-        return UserDefaults.standard.string(forKey: UserDefaultsKeys.userId)
+    static func getApiKey() -> String? {
+        return UserDefaults.standard.string(forKey: UserDefaultsKeys.apiKey)
     }
 }

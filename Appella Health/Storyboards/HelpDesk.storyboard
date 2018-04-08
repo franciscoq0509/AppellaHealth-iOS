@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sH4-xG-w6D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sH4-xG-w6D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="helpDeskBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-IN-sdi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpDeskBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-IN-sdi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nnx-HQ-92E">
                                 <rect key="frame" x="87" y="447" width="200" height="200"/>
@@ -74,6 +73,10 @@
                         <constraints>
                             <constraint firstItem="AuD-uz-tUs" firstAttribute="bottom" secondItem="nnx-HQ-92E" secondAttribute="bottom" constant="20" id="4Pt-aA-ecZ"/>
                             <constraint firstItem="nnx-HQ-92E" firstAttribute="centerX" secondItem="Une-hT-Edq" secondAttribute="centerX" id="9qN-iU-7RW"/>
+                            <constraint firstItem="cCw-IN-sdi" firstAttribute="bottom" secondItem="Une-hT-Edq" secondAttribute="bottom" id="B4V-4L-c4y"/>
+                            <constraint firstItem="cCw-IN-sdi" firstAttribute="top" secondItem="Une-hT-Edq" secondAttribute="top" id="Efa-Wp-8bk"/>
+                            <constraint firstItem="cCw-IN-sdi" firstAttribute="trailing" secondItem="AuD-uz-tUs" secondAttribute="trailing" id="Suv-FF-9Iv"/>
+                            <constraint firstItem="cCw-IN-sdi" firstAttribute="leading" secondItem="AuD-uz-tUs" secondAttribute="leading" id="Zyg-8m-1d4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AuD-uz-tUs"/>
                     </view>

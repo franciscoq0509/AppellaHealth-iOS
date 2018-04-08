@@ -21,4 +21,12 @@ extension String {
         let emailTest = NSPredicate(format:"SELF MATCHES[c] %@", emailRegEx)
         return emailTest.evaluate(with: self)
     }
+    
+    func stringFromHtml() -> NSAttributedString? {
+        guard let data = self.data(using: .utf8, allowLossyConversion: true),
+            let string = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) else {
+            return nil
+        }
+        return string
+    }
 }

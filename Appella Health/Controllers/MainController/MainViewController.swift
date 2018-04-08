@@ -8,16 +8,25 @@
 
 import UIKit
 import SideMenu
+import SVProgressHUD
+
+protocol MainViewControllerDelegate: class {
+    func didSelectArticleWith(id: Int)
+}
 
 class MainViewController: BaseViewController {
     
     //MARK: - Properties
     
-    var kitchen: MainKitchen!
+    private var kitchen: MainKitchen!
     
     //MARK: - Outlets
     
-    @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var mainView: MainView! {
+        didSet {
+            mainView.delegate = self
+        }
+    }
     
     //MARK: - Dependency Injection
     
@@ -35,11 +44,13 @@ class MainViewController: BaseViewController {
         removeBackButtonTitle()
         navigationController?.navigationBar.setGradientBackground(colors: [.black, .clear])
         addTextToRightBarItem(text: NSLocalizedString("Appella Health", comment: ""))
+        
+        kitchen.receive(event: .viewDidLoad)
     }
     
     //MARK: - Navigation
     
-    func openHelpDesk() {
+    private func openHelpDesk() {
         let storyboard = UIStoryboard.helpDesk
         guard let viewController = storyboard.instantiateInitialViewController() else {
             fatalError("Fail to instantiatiate initial view controller of help desk storyboard")
@@ -47,12 +58,18 @@ class MainViewController: BaseViewController {
         navigationController?.pushViewController(viewController, animated: false)
     }
     
-    func openAccount() {
+    private func openAccount() {
         let storyboard = UIStoryboard.account
         guard let viewController = storyboard.instantiateInitialViewController() else {
             fatalError("Fail to instantiatiate initial view controller of account storyboard")
         }
         navigationController?.pushViewController(viewController, animated: false)
+    }
+    
+    //MARK: - View State Change
+    
+    private func handleChangeOf(viewState: MainViewState) {
+        mainView.configure(viewState: viewState)
     }
 }
 
@@ -67,7 +84,30 @@ extension MainViewController: KitchenDelegate {
             openAccount()
         case .openHelpDesk:
             openHelpDesk()
+        case .startLoading:
+            SVProgressHUD.show()
+        case .finishLoading:
+            SVProgressHUD.dismiss()
+        case .errorHappend(let error):
+            SVProgressHUD.showError(withStatus: error)
+        case .articlesLoaded(let viewState):
+            handleChangeOf(viewState: viewState)
+        case .logout:
+            Logout.perform()
         }
+    }
+}
+
+//MARK: - MainView Controller Delegate
+
+extension MainViewController: MainViewControllerDelegate {
+    func didSelectArticleWith(id: Int) {
+        let storyboard = UIStoryboard.article
+        guard let viewController = storyboard.instantiateInitialViewController() as? ArticleViewController else {
+            fatalError("Unexpected view controller")
+        }
+        viewController.setArticleId(id)
+        navigationController?.show(viewController, sender: self)
     }
 }
 

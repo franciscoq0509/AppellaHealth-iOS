@@ -10,7 +10,7 @@ import UIKit
 import SVProgressHUD
 import WebKit
 
-class PrivacyPolicyViewController: BaseViewController {
+class PrivacyPolicyViewController: BaseViewController, WKUIDelegate {
 
     //MARK: - Properties
     
@@ -18,7 +18,7 @@ class PrivacyPolicyViewController: BaseViewController {
     
     //MARK: - Outlets
     
-    @IBOutlet private var webView: WKWebView!
+    var webView: WKWebView!
     
     //MARK: - Dependency Injection
     
@@ -32,6 +32,13 @@ class PrivacyPolicyViewController: BaseViewController {
         super.viewWillAppear(true)
         
         kitchen.receive(event: .viewWillAppear)
+    }
+    
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
     }
 }
 
@@ -51,6 +58,8 @@ extension PrivacyPolicyViewController: KitchenDelegate {
             navigationController?.popViewController(animated: true)
         case .textLoaded(let text):
             webView.loadHTMLString(text, baseURL: nil)
+        case .logout:
+            Logout.perform()
         }
     }
 }

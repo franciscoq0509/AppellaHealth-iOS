@@ -9,8 +9,13 @@
 import UIKit
 import Swinject
 import IQKeyboardManager
+import OneSignal
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private enum Consts {
+        static let oneSignalAppId = "ef094d29-eaaa-45e0-819f-7a5adfb69c78"
+    }
 
     var window: UIWindow?
     let assembler: Assembler
@@ -21,10 +26,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        //Setup extensions
+        
         IQKeyboardManager.shared().isEnabled = true
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+        OneSignal.initWithLaunchOptions(launchOptions,
+                                        appId: Consts.oneSignalAppId,
+                                        handleNotificationAction: nil,
+                                        settings: onesignalInitSettings)
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
+        
+        //Show login view or news view
         
         var storyboard: UIStoryboard
-        if UserDefaults.getUserId() != nil {
+        if UserDefaults.getApiKey() != nil {
             storyboard = UIStoryboard.main
         }
         else {

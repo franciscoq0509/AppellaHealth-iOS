@@ -8,14 +8,15 @@
 
 import Foundation
 
-enum ResponseStatus: String {
-    case fail
-    case failed
-    case success
+enum ResponseStatus: String, Codable {
+    case ok
+    case error
 }
 
 struct Response: Codable {
-    let responseData: ResponseData
+    let status: ResponseStatus
+    
+    let responseMessage: ResponseMessage
     
     init?(_ data: Data) {
         do {
@@ -26,9 +27,13 @@ struct Response: Codable {
             return nil
         }
     }
+    
+    enum CodingKeys: String, CodingKey {
+        case status
+        case responseMessage = "payload"
+    }
 }
 
-struct ResponseData: Codable {
+struct ResponseMessage: Codable {
     let message: String
-    let result: String
 }

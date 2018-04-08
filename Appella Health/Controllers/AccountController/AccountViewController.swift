@@ -56,15 +56,7 @@ class AccountViewController: BaseViewController {
     //MARK: - Navigation
     
     func logout() {
-        
-        let storyboard = UIStoryboard.login
-        guard let viewController = storyboard.instantiateInitialViewController() else {
-            fatalError("failed to instantiate initial view controller of login storyboard")
-        }
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("failed to unwrap AppDelegate")
-        }
-        appDelegate.window?.rootViewController = viewController
+        Logout.perform()
     }
 }
 
