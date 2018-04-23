@@ -15,6 +15,8 @@ protocol ArticleViewControllerDelegate: class {
     func didSelectArticleWith(id: Int)
     func playVideo(url: String?)
     func show(photos: [String])
+    func nextArticle()
+    func previousArticle()
 }
 
 class ArticleViewController: BaseViewController {
@@ -30,12 +32,21 @@ class ArticleViewController: BaseViewController {
             kitchen?.receive(event: .didSelectArticleWith(id: articleId))
         }
     }
+    private var articlesCategory: ArticleCategory? {
+        didSet {
+            guard let articlesCategory = articlesCategory else {
+                return
+            }
+            kitchen?.receive(event: .setupArticlesCategory(articlesCategory))
+        }
+    }
     
     //MARK: - Outlets
     
     @IBOutlet private var articleView: ArticleView! {
         didSet {
             articleView.articleViewControllerDelegate = self
+            articleView.setupGestureRecognizers()
         }
     }
     
@@ -56,8 +67,37 @@ class ArticleViewController: BaseViewController {
     
     //MARK: - Helpers
     
-    func setArticleId(_ articleId: Int) {
+    func setup(articleId: Int, articlesCategory: ArticleCategory) {
+        self.articlesCategory = articlesCategory
         self.articleId = articleId
+    }
+    
+    func didLoadOtherArticle(_ viewState: ArticleViewState, direction: ArticleSwitch) {
+        var otherViewFrame = articleView.frame
+        switch direction {
+        case .next:
+            otherViewFrame.origin.x += articleView.frame.width
+        case .previous:
+            otherViewFrame.origin.x -= articleView.frame.width
+        }
+        
+        let otherView = ArticleView(frame: otherViewFrame)
+        otherView.configureWith(viewState: viewState)
+        view.addSubview(otherView)
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            otherView.frame = self.articleView.frame
+            switch direction {
+            case .next:
+                self.articleView.frame.origin.x -= self.articleView.frame.width
+            case .previous:
+                self.articleView.frame.origin.x += self.articleView.frame.width
+            }
+        }) { _ in
+            self.articleView.removeFromSuperview()
+            self.articleView = otherView
+            self.kitchen?.receive(event: .refreshData)
+        }
     }
 }
 
@@ -74,10 +114,15 @@ extension ArticleViewController: KitchenDelegate {
             SVProgressHUD.dismiss()
         case .errorHappend(let error):
             SVProgressHUD.showError(withStatus: error)
+            self.navigationController?.popViewController(animated: true)
         case .dataLoaded(let viewState):
             articleView.configureWith(viewState: viewState)
         case .logout:
             Logout.perform()
+        case .didLoadNextArticle(let viewState):
+            didLoadOtherArticle(viewState, direction: .next)
+        case .didLoadPreviousArticle(let viewState):
+            didLoadOtherArticle(viewState, direction: .previous)
         }
     }
 }
@@ -90,7 +135,10 @@ extension ArticleViewController: ArticleViewControllerDelegate {
         guard let viewController = storyboard.instantiateInitialViewController() as? ArticleViewController else {
             fatalError("Unexpected view controller")
         }
-        viewController.setArticleId(id)
+        guard let articlesCategory = kitchen?.articleStateVariables.articlesCategory else {
+            fatalError("Expected articles category")
+        }
+        viewController.setup(articleId: id, articlesCategory: articlesCategory)
         navigationController?.show(viewController, sender: self)
     }
     
@@ -99,7 +147,8 @@ extension ArticleViewController: ArticleViewControllerDelegate {
             return
         }
         let avPlayer = AVPlayer(url: videoUrl)
-        let avPlayerController = AVPlayerViewController()
+        avPlayer.play()
+        let avPlayerController = VideoPlayerViewController()
         avPlayerController.player = avPlayer
         navigationController?.present(avPlayerController, animated: true, completion: nil)
     }
@@ -111,6 +160,14 @@ extension ArticleViewController: ArticleViewControllerDelegate {
         }
         viewController.photos = photos
         navigationController?.show(viewController, sender: self)
+    }
+    
+    func nextArticle() {
+        self.kitchen?.receive(event: .didSwipeToNextArticle)
+    }
+    
+    func previousArticle() {
+        self.kitchen?.receive(event: .didSwipeToPreviousArticle)
     }
 }
 

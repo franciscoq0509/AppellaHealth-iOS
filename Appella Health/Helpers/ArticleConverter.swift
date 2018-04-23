@@ -15,7 +15,7 @@ class ArticleConverter {
             return photo.image
         }
         let showVideoButton = article.type == .video ? true : false
-        let convertedArticle = ArticleViewModel(title: article.title, imageUrl: article.thumbnailImage, date: convertedDate, showVideoButton: showVideoButton, description: article.description, id: article.articleId, video: article.video, photoUrls: photoUrls)
+        let convertedArticle = ArticleViewModel(title: article.title, imageUrl: article.thumbnailImage, date: convertedDate, showVideoButton: showVideoButton, description: article.description, id: article.articleId, video: article.video, photoUrls: photoUrls, imageType: article.imageType)
         return convertedArticle
     }
 }

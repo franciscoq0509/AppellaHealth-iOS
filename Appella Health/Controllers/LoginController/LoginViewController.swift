@@ -33,7 +33,6 @@ class LoginViewController: UIViewController {
         
         navigationController?.isNavigationBarHidden = true
         removeBackButtonTitle()
-        UIApplication.shared.statusBarStyle = .default
     }
     
     //MARK: - Actions

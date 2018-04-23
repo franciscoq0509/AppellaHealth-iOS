@@ -35,6 +35,7 @@ class AccountViewController: BaseViewController {
         tableView.tableFooterView = UIView()
         removeBackButtonTitle()
         addTextToRightBarItem(text: NSLocalizedString("Appella Health", comment: ""))
+        setMenuIcon(#selector(didTapMenuIcon))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +58,10 @@ class AccountViewController: BaseViewController {
     
     func logout() {
         Logout.perform()
+    }
+    
+    @objc func didTapMenuIcon() {
+        showMenu()
     }
 }
 
@@ -232,5 +237,11 @@ extension AccountViewController: RemoveBackButtonTitle {
 //MARK: - Add Label To Right Bar Item
 
 extension AccountViewController: AddLabelToRightBarItem {
+    
+}
+
+//MARK: - MenuIcon
+
+extension AccountViewController: MenuIcon {
     
 }

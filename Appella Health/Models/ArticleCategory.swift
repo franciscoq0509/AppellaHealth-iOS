@@ -9,7 +9,7 @@
 import Foundation
 
 enum ArticleCategory: Int {
-    case news = 1
+    case news = 0
     case humanResource = 2
     case informationTechnology = 3
     case events = 4
@@ -20,7 +20,7 @@ enum ArticleCategory: Int {
     case account
     case appellaHealth
     
-    static let allCategories = [news, humanResource, informationTechnology, events, dining, nursing, photoGallery, helpDesk, account, appellaHealth]
+    static let allCategories = [news, nursing, humanResource, informationTechnology, events, photoGallery, dining, helpDesk, account, appellaHealth]
     
     var describing: String {
         switch self {

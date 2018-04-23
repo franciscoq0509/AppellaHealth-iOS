@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "facilitiesIcon-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "facilitiesIcon.png",
+      "filename" : "facilitiesIcon@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "facilitiesIcon@3x.png",
       "scale" : "3x"
     }
   ],

@@ -14,29 +14,26 @@
         <scene sceneID="FGb-Yh-OjO">
             <objects>
                 <viewController id="KwO-Uu-Eg6" customClass="ArticleViewController" customModule="Appella_Health" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="60G-PV-XcQ" customClass="ArticleView" customModule="Appella_Health" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="60G-PV-XcQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-uE-z61">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-c7-bKn" customClass="ArticleView" customModule="Appella_Health" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </tableView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gc8-uE-z61" firstAttribute="top" secondItem="60G-PV-XcQ" secondAttribute="top" id="1p0-NC-zTx"/>
-                            <constraint firstItem="gc8-uE-z61" firstAttribute="bottom" secondItem="60G-PV-XcQ" secondAttribute="bottom" id="8Tj-Xj-hhr"/>
-                            <constraint firstItem="gc8-uE-z61" firstAttribute="trailing" secondItem="yEw-b0-RYc" secondAttribute="trailing" id="ZzN-bI-Xbd"/>
-                            <constraint firstItem="gc8-uE-z61" firstAttribute="leading" secondItem="yEw-b0-RYc" secondAttribute="leading" id="oWG-QJ-tbO"/>
+                            <constraint firstItem="WNb-c7-bKn" firstAttribute="top" secondItem="60G-PV-XcQ" secondAttribute="top" id="8R3-hC-2aG"/>
+                            <constraint firstAttribute="bottom" secondItem="WNb-c7-bKn" secondAttribute="bottom" id="QRW-bU-MSn"/>
+                            <constraint firstItem="yEw-b0-RYc" firstAttribute="trailing" secondItem="WNb-c7-bKn" secondAttribute="trailing" id="e2B-cy-JdM"/>
+                            <constraint firstItem="WNb-c7-bKn" firstAttribute="leading" secondItem="yEw-b0-RYc" secondAttribute="leading" id="puv-xR-b0W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yEw-b0-RYc"/>
-                        <connections>
-                            <outlet property="tableView" destination="gc8-uE-z61" id="T1T-DM-H2i"/>
-                        </connections>
                     </view>
                     <connections>
-                        <outlet property="articleView" destination="60G-PV-XcQ" id="v8o-9t-NNK"/>
+                        <outlet property="articleView" destination="WNb-c7-bKn" id="h8h-HF-hTS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnc-M6-BZN" userLabel="First Responder" sceneMemberID="firstResponder"/>

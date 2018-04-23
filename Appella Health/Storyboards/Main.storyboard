@@ -57,12 +57,6 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="x6I-mu-feD">
-                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="3vf-Li-Bxc">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="8Xk-fx-cgH" kind="presentation" id="Pbn-lL-zmb"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Appella Health" id="s7w-6t-kq9"/>
                     </navigationItem>
                     <connections>
@@ -73,61 +67,5 @@
             </objects>
             <point key="canvasLocation" x="-1466.4000000000001" y="8.5457271364317844"/>
         </scene>
-        <!--Side Menu Navigation Controller-->
-        <scene sceneID="PuE-n0-Cmg">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="8Xk-fx-cgH" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8up-mw-yHL">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="OKw-Bq-VOq" kind="relationship" relationship="rootViewController" id="r5P-sZ-Qi9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3vw-oc-fAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-484" y="10"/>
-        </scene>
-        <!--Side Menu View Controller-->
-        <scene sceneID="4En-Kt-tXv">
-            <objects>
-                <viewController id="OKw-Bq-VOq" customClass="SideMenuViewController" customModule="Appella_Health" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ETZ-jO-QwH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CTb-2o-0sa">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="OKw-Bq-VOq" id="w1W-sF-pTf"/>
-                                    <outlet property="delegate" destination="OKw-Bq-VOq" id="qb3-pu-sCj"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="CTb-2o-0sa" firstAttribute="trailing" secondItem="h8j-lu-c1j" secondAttribute="trailing" id="MQd-fl-qQC"/>
-                            <constraint firstItem="CTb-2o-0sa" firstAttribute="bottom" secondItem="h8j-lu-c1j" secondAttribute="bottom" id="Rhf-xH-rj5"/>
-                            <constraint firstItem="CTb-2o-0sa" firstAttribute="leading" secondItem="h8j-lu-c1j" secondAttribute="leading" id="Yyt-jT-iSQ"/>
-                            <constraint firstItem="CTb-2o-0sa" firstAttribute="top" secondItem="ETZ-jO-QwH" secondAttribute="top" id="ac2-oa-P7x"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="h8j-lu-c1j"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="F5u-wH-2mI"/>
-                    <connections>
-                        <outlet property="tableView" destination="CTb-2o-0sa" id="5fy-mb-uck"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I7m-ef-pjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="429.60000000000002" y="-1.3493253373313345"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="menuIcon" width="50" height="50"/>
-    </resources>
 </document>

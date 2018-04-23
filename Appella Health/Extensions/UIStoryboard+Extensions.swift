@@ -17,4 +17,5 @@ extension UIStoryboard {
     static let article = UIStoryboard(name: "Article", bundle: nil)
     static let gallery = UIStoryboard(name: "Gallery", bundle: nil)
     static let photo = UIStoryboard(name: "Photo", bundle: nil)
+    static let sideMenu = UIStoryboard(name: "SideMenu", bundle: nil)
 }

@@ -11,7 +11,7 @@ import BrightFutures
 
 class AlamofireNetworkManager: NetworkManager {
     
-    let serviceUrl = "http://173.21.80.160:9500/api/mobile"
+    let serviceUrl = "https://transpara.org/api/mobile"
     
     enum WebServiceMethods {
         static let login = "login"
@@ -269,7 +269,7 @@ class AlamofireNetworkManager: NetworkManager {
     func getArticles(category: ArticleCategory) -> Future<[Article], AnyError> {
         let promise = Promise<[Article], AnyError>()
         let requestUrl = getUrl(with: WebServiceMethods.news)
-        let parameters = [WebServiceParameters.categoryId: category.rawValue]
+        let parameters: Parameters = category.rawValue != 0 ? [WebServiceParameters.categoryId: category.rawValue]: [:]
         Alamofire.request(requestUrl, parameters: parameters, headers: self.headers).responseJSON { [weak self] response in
             guard let _self = self else {
                 return

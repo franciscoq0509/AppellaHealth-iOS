@@ -96,7 +96,16 @@ extension MainView: UITableViewDataSource {
 extension MainView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return self.bounds.height
+            guard let imageType = viewState?.articles[indexPath.row].imageType else {
+                return self.bounds.height
+            }
+            switch imageType {
+            case .full:
+                return self.bounds.height
+            case .half:
+                return self.bounds.height / 2
+            }
+            
         }
         else {
             return self.bounds.width / 2

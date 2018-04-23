@@ -11,7 +11,7 @@ import UIKit
 enum PhoneCaller {
     
     enum Consts {
-        static let phoneNumber = "3015555556"
+        static let phoneNumber = "301-229-1540"
     }
     
     static func call() {

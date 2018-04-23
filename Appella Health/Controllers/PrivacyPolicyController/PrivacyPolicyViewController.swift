@@ -8,9 +8,8 @@
 
 import UIKit
 import SVProgressHUD
-import WebKit
 
-class PrivacyPolicyViewController: BaseViewController, WKUIDelegate {
+class PrivacyPolicyViewController: BaseViewController {
 
     //MARK: - Properties
     
@@ -18,7 +17,7 @@ class PrivacyPolicyViewController: BaseViewController, WKUIDelegate {
     
     //MARK: - Outlets
     
-    var webView: WKWebView!
+    @IBOutlet private var textView: UITextView!
     
     //MARK: - Dependency Injection
     
@@ -34,11 +33,15 @@ class PrivacyPolicyViewController: BaseViewController, WKUIDelegate {
         kitchen.receive(event: .viewWillAppear)
     }
     
-    override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
-        view = webView
+    //MARK: - Setup
+    
+    func setupTextViewWith(_ text: String) {
+        if let attributedString = text.stringFromHtml() {
+            textView.attributedText = attributedString
+        }
+        else {
+            textView.text = text
+        }
     }
 }
 
@@ -57,7 +60,7 @@ extension PrivacyPolicyViewController: KitchenDelegate {
             SVProgressHUD.showError(withStatus: error)
             navigationController?.popViewController(animated: true)
         case .textLoaded(let text):
-            webView.loadHTMLString(text, baseURL: nil)
+            setupTextViewWith(text)
         case .logout:
             Logout.perform()
         }

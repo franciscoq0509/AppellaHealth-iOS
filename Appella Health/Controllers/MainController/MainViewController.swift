@@ -39,13 +39,22 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIApplication.shared.statusBarStyle = .lightContent
-        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: view)
+        let sideMenuStoryboard = UIStoryboard.sideMenu
+        guard let sideMenuController = sideMenuStoryboard.instantiateInitialViewController() else {
+            fatalError("Failed to instantiateInitialViewController for SideMenu Storyboard")
+        }
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: sideMenuController)
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
         removeBackButtonTitle()
         navigationController?.navigationBar.setGradientBackground(colors: [.black, .clear])
         addTextToRightBarItem(text: NSLocalizedString("Appella Health", comment: ""))
+        setMenuIcon(#selector(didTapSideMenuButton))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        kitchen.receive(event: .viewDidLoad)
+        kitchen.receive(event: .viewWillAppear)
     }
     
     //MARK: - Navigation
@@ -64,6 +73,12 @@ class MainViewController: BaseViewController {
             fatalError("Fail to instantiatiate initial view controller of account storyboard")
         }
         navigationController?.pushViewController(viewController, animated: false)
+    }
+    
+    //MARK: - Actions
+    
+    @objc func didTapSideMenuButton() {
+        showMenu()
     }
     
     //MARK: - View State Change
@@ -94,6 +109,8 @@ extension MainViewController: KitchenDelegate {
             handleChangeOf(viewState: viewState)
         case .logout:
             Logout.perform()
+        case .categoryDidChange:
+            navigationController?.popToRootViewController(animated: false)
         }
     }
 }
@@ -106,7 +123,7 @@ extension MainViewController: MainViewControllerDelegate {
         guard let viewController = storyboard.instantiateInitialViewController() as? ArticleViewController else {
             fatalError("Unexpected view controller")
         }
-        viewController.setArticleId(id)
+        viewController.setup(articleId: id, articlesCategory: kitchen.currentCategory)
         navigationController?.show(viewController, sender: self)
     }
 }
@@ -120,5 +137,11 @@ extension MainViewController: RemoveBackButtonTitle {
 //MARK: - Add Label To Right Bar Item
 
 extension MainViewController: AddLabelToRightBarItem {
+    
+}
+
+//MARK: - MenuIcon
+
+extension MainViewController: MenuIcon {
     
 }

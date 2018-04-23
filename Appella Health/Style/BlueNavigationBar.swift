@@ -21,6 +21,5 @@ extension BlueNavigationBar {
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.barTintColor = AppellaHealthColors.navigationBarBlueColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        UIApplication.shared.statusBarStyle = .lightContent
     }
 }

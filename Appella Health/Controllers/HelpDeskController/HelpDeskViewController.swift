@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class HelpDeskViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class HelpDeskViewController: UIViewController {
         super.viewDidLoad()
         
         addTextToRightBarItem(text: NSLocalizedString("Appella Health", comment: ""))
+        setMenuIcon(#selector(didTapMenuButton))
     }
     
     //MARK: - Actions
@@ -23,10 +25,20 @@ class HelpDeskViewController: UIViewController {
     @IBAction func didTapCallButton() {
         PhoneCaller.call()
     }
+    
+    @objc func didTapMenuButton() {
+        showMenu()
+    }
 }
 
 //MARK: - Add Label To Right Bar Item
 
 extension HelpDeskViewController: AddLabelToRightBarItem {
+    
+}
+
+//MARK: - MenuIcon
+
+extension HelpDeskViewController: MenuIcon {
     
 }

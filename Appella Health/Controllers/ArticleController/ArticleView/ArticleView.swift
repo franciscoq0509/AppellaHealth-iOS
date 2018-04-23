@@ -20,6 +20,7 @@ class ArticleView: UIView {
     
     enum Consts {
         static let sectionHeaderHeight: CGFloat = 23
+        static let nibName = "ArticleView"
     }
     
     //MARK: - Properties
@@ -32,6 +33,8 @@ class ArticleView: UIView {
     weak var articleViewControllerDelegate: ArticleViewControllerDelegate?
     
     //MARK: - Outlets
+    
+    @IBOutlet private var contentView: UIView!
     
     @IBOutlet private var tableView: UITableView! {
         didSet {
@@ -50,6 +53,51 @@ class ArticleView: UIView {
             let mainNib = UINib(nibName: ArticleMainTableViewCell.identifier, bundle: nil)
             tableView.register(mainNib, forCellReuseIdentifier: ArticleMainTableViewCell.identifier)
         }
+    }
+    
+    //MARK: - Init
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        loadViewFromNib()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        loadViewFromNib()
+    }
+    
+    func loadViewFromNib() {
+        Bundle.main.loadNibNamed(Consts.nibName, owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = self.bounds
+    }
+    
+    //MARK: - Setup
+    
+    func setupGestureRecognizers() {
+        let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeLeft))
+        swipeLeftGestureRecognizer.direction = .left
+        swipeLeftGestureRecognizer.delegate = self
+        
+        let swipeRightGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeRight))
+        swipeRightGestureRecognizer.direction = .right
+        swipeRightGestureRecognizer.delegate = self
+        
+        self.addGestureRecognizer(swipeLeftGestureRecognizer)
+        self.addGestureRecognizer(swipeRightGestureRecognizer)
+    }
+    
+    //MARK: - Handle Gestures
+    
+    @objc private func handleSwipeLeft() {
+        articleViewControllerDelegate?.nextArticle()
+    }
+    
+    @objc private func handleSwipeRight() {
+        articleViewControllerDelegate?.previousArticle()
     }
     
     //MARK: - Configuration
@@ -150,6 +198,10 @@ extension ArticleView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return indexPath.section != 0
     }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .none
+    }
 }
 
 //MARK: - Article View Delegate
@@ -164,5 +216,14 @@ extension ArticleView: ArticleViewDelegate {
             return
         }
         articleViewControllerDelegate?.show(photos: viewState.article.photoUrls)
+    }
+}
+
+//MARK: - UIGestureRecognizerDelegate
+
+extension ArticleView: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }

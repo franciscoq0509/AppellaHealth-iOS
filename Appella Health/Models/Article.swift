@@ -33,6 +33,20 @@ enum ArticleType: String, Codable {
     case video
 }
 
+enum ImageType: String, Codable {
+    case full
+    case half
+    
+    init(rawValue: String) {
+        if (rawValue == "" || rawValue == "full") {
+            self = .full
+        }
+        else {
+            self = .half
+        }
+    }
+}
+
 struct Article: Codable {
     let articleId: Int
     let categoryId: Int
@@ -44,6 +58,7 @@ struct Article: Codable {
     let thumbnailImage: String?
     let video: String?
     let photos: [Photo]
+    let imageType: ImageType
     
     enum CodingKeys: String, CodingKey {
         case articleId = "news_id"
@@ -56,6 +71,7 @@ struct Article: Codable {
         case thumbnailImage = "thumbnail_image"
         case video
         case photos
+        case imageType = "image_type"
     }
 }
 

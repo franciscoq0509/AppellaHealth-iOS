@@ -131,10 +131,14 @@ class MainAssembly: Assembly {
             let articleConverter = resolver.forceResolve(ArticleConverter.self)
             return ArticleViewStateFactory(articleConverter: articleConverter)
         }
+        container.register(ArticleStateVariables.self) { resolver in
+            return ArticleStateVariables()
+        }
         container.register(ArticleKitchen.self) { resolver in
             let articleViewStateFactory = resolver.forceResolve(ArticleViewStateFactory.self)
             let networkManager = resolver.forceResolve(NetworkManager.self)
-            return ArticleKitchen(networkManager: networkManager, articleViewStateFactory: articleViewStateFactory)
+            let articleStateVariables = resolver.forceResolve(ArticleStateVariables.self)
+            return ArticleKitchen(networkManager: networkManager, articleViewStateFactory: articleViewStateFactory, articleStateVariables: articleStateVariables)
         }
         container.storyboardInitCompleted(ArticleViewController.self) { resolver, controller in
             let articleKitchen = resolver.forceResolve(ArticleKitchen.self)

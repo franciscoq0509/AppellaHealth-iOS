@@ -18,10 +18,17 @@ extension UINavigationBar {
         case .iPhoneX:
             updatedFrame.size.height += 44
         default:
-            updatedFrame.size.height += 20
+            break
         }
         
         let gradientLayer = CAGradientLayer(frame: updatedFrame, colors: colors)
+        
+        switch deviceInfo {
+        case .iPhoneX:
+            gradientLayer.locations = [0.3, 1.0]
+        default:
+            gradientLayer.locations = [0.3, 0.8]
+        }
         
         setBackgroundImage(gradientLayer.createGradientImage(), for: UIBarMetrics.default)
         shadowImage = UIImage()

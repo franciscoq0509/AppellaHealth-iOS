@@ -15,13 +15,14 @@ class MainViewLargeTableViewCell: UITableViewCell {
     
     //MARK: - Properties
     
-    private var gradientView: UIView?
-
+    private var gradientLayer: CAGradientLayer?
+    
     //MARK: - Outlets
     
     @IBOutlet private var mainImage: UIImageView!
     @IBOutlet private var playIcon: UIImageView!
     @IBOutlet private var title: UILabel!
+    @IBOutlet private var gradientView: UIView!
     
     func configure(with article: ArticleViewModel) {
         if let imageUrl = article.imageUrl {
@@ -37,31 +38,21 @@ class MainViewLargeTableViewCell: UITableViewCell {
         else {
             playIcon.isHidden = true
         }
-        
-        if gradientView == nil {
-            setupGradient()
-        }
+        setupGradient()
     }
     
     //MARK: - Helpers
     
     func setupGradient() {
         layoutIfNeeded()
-        let titleFrame = title.frame
-        gradientView = UIView(frame: CGRect(x: self.frame.origin.x, y: titleFrame.origin.y, width: self.bounds.width, height: titleFrame.height))
-        guard let gradientView = gradientView else {
-            return
-        }
         
-        gradientView.alpha = 0.2
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.black.cgColor, UIColor.clear.cgColor]
-        gradient.frame = gradientView.bounds
-        gradient.startPoint = CGPoint(x: 0.5, y: 0)
-        gradient.endPoint = CGPoint(x: 0.5, y: 1)
-        gradientView.layer.insertSublayer(gradient, at: 0)
-        self.addSubview(gradientView)
-        self.sendSubview(toBack: gradientView)
+        if gradientLayer == nil {
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+            gradientView.layer.insertSublayer(gradientLayer, at: 0)
+            self.gradientLayer = gradientLayer
+        }
+        gradientLayer?.frame = gradientView.bounds
     }
     
 }

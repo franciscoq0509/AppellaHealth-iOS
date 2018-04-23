@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,13 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appella Health" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZI-A4-sS2">
-                        <rect key="frame" x="105" y="11" width="199" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <rect key="frame" x="164" y="11" width="140" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="0A8-Eh-0l0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallLogo" translatesAutoresizingMaskIntoConstraints="NO" id="wAF-bc-ksD">
-                        <rect key="frame" x="30" y="3" width="45" height="45"/>
+                        <rect key="frame" x="119" y="3" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="45" id="1eN-b4-KBd"/>
                             <constraint firstAttribute="width" constant="45" id="Nnz-Nt-EKn"/>
@@ -34,12 +37,12 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="WZI-A4-sS2" firstAttribute="leading" relation="lessThanOrEqual" secondItem="wAF-bc-ksD" secondAttribute="trailing" constant="30" id="NqH-H2-5uT"/>
+                    <constraint firstItem="wAF-bc-ksD" firstAttribute="leading" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="119" id="cTf-Cl-Jj4"/>
                     <constraint firstAttribute="trailing" secondItem="WZI-A4-sS2" secondAttribute="trailing" constant="16" id="duX-Tz-NZt"/>
                     <constraint firstItem="WZI-A4-sS2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="f7d-sW-Y5c"/>
-                    <constraint firstItem="wAF-bc-ksD" firstAttribute="leading" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="kGY-B1-LS9"/>
                     <constraint firstAttribute="bottom" secondItem="wAF-bc-ksD" secondAttribute="bottom" constant="3.5" id="loj-xR-six"/>
                     <constraint firstItem="wAF-bc-ksD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="pwj-wM-1V1"/>
+                    <constraint firstItem="WZI-A4-sS2" firstAttribute="leading" secondItem="wAF-bc-ksD" secondAttribute="trailing" id="r4k-AE-aNV"/>
                     <constraint firstAttribute="bottom" secondItem="WZI-A4-sS2" secondAttribute="bottom" constant="11.5" id="ypW-Qj-6Fy"/>
                 </constraints>
             </tableViewCellContentView>

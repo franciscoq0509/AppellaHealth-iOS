@@ -17,4 +17,5 @@ struct ArticleViewModel {
     let id: Int
     let video: String?
     let photoUrls: [String]
+    let imageType: ImageType
 }

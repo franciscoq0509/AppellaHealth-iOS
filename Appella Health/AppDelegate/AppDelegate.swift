@@ -27,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        //Setup appearance
+        
+        application.isStatusBarHidden = true
+        
         //Setup extensions
         
         IQKeyboardManager.shared().isEnabled = true

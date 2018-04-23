@@ -7,8 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
+    
+    private enum Consts {
+        static let fontName = "Helvetica"
+    }
+    
     func isValidEmail() -> Bool {
         let emailRegEx = "(?:[a-zA-Z0-9!#$%\\&‘*+/=?\\^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%\\&'*+/=?\\^_`{|}" +
         "~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\" +
@@ -22,11 +28,20 @@ extension String {
         return emailTest.evaluate(with: self)
     }
     
-    func stringFromHtml() -> NSAttributedString? {
+    func stringFromHtml() -> NSMutableAttributedString? {
         guard let data = self.data(using: .utf8, allowLossyConversion: true),
-            let string = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) else {
+            let string = try? NSMutableAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil) else {
             return nil
         }
+        if let font = UIFont(name: Consts.fontName, size: 17.0) {
+            string.addAttribute(.font, value: font, range: NSMakeRange(0, string.string.count))
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 0.5 * font.lineHeight
+            paragraphStyle.paragraphSpacing = font.lineHeight
+            string.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, string.string.count))
+        }
+
         return string
     }
 }

@@ -30,9 +30,15 @@ class SideMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isNavigationBarHidden = true
+        
         tableView.tableFooterView = UIView()
         let nib = UINib(nibName: SideMenuTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: SideMenuTableViewCell.identifier)
+        
+        let appScreenRect = UIScreen.main.bounds
+        SideMenuManager.default.menuWidth = appScreenRect.width * 0.74
+        SideMenuManager.default.menuShadowRadius = 0
     }
     
     override func viewWillLayoutSubviews() {
@@ -76,6 +82,7 @@ extension SideMenuViewController: UITableViewDelegate {
             kitchen.receive(event: .disSelectCategory(category: category))
             dismiss(animated: true, completion: nil)
         }
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {

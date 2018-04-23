@@ -30,7 +30,8 @@ class GalleryKitchen: Kitchen {
     func receive(event: GalleryViewEvent) {
         switch event {
         case .load(let photos):
-            delegate?.perform(.didLoad(viewState: galleryViewStateFactory.make(photos: photos)))
+            let viewState = galleryViewStateFactory.make(photos: photos)
+            delegate?.perform(.didLoad(viewState: viewState))
         }
     }
 }

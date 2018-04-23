@@ -17,9 +17,26 @@
                     <view key="view" contentMode="scaleToFill" id="5Yd-eg-oob">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wDz-4e-U8s">
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PLp-ri-pTn" firstAttribute="bottom" secondItem="wDz-4e-U8s" secondAttribute="bottom" constant="20" id="P6i-lJ-SbM"/>
+                            <constraint firstItem="wDz-4e-U8s" firstAttribute="leading" secondItem="PLp-ri-pTn" secondAttribute="leading" constant="16" id="V2v-U3-mXC"/>
+                            <constraint firstItem="wDz-4e-U8s" firstAttribute="top" secondItem="PLp-ri-pTn" secondAttribute="top" id="aF3-RD-wFY"/>
+                            <constraint firstItem="PLp-ri-pTn" firstAttribute="trailing" secondItem="wDz-4e-U8s" secondAttribute="trailing" constant="16" id="zTd-0w-kcm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PLp-ri-pTn"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="wDz-4e-U8s" id="a0J-EF-bSZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWH-9Y-OI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

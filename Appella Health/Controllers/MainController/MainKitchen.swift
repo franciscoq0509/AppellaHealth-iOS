@@ -9,7 +9,7 @@
 import Foundation
 
 enum MainViewEvent {
-    case viewDidLoad
+    case viewWillAppear
 }
 
 enum MainState {
@@ -20,6 +20,7 @@ enum MainState {
     case openAccount
     case errorHappend(error: String)
     case logout
+    case categoryDidChange
 }
 
 protocol MainKitchenDelegate: class {
@@ -42,7 +43,7 @@ class MainKitchen: Kitchen {
     
     func receive(event: ViewEvent) {
         switch event {
-        case .viewDidLoad:
+        case .viewWillAppear:
             loadNews()
         }
     }
@@ -54,7 +55,8 @@ class MainKitchen: Kitchen {
                 return
             }
             _self.delegate?.perform(.finishLoading)
-            _self.delegate?.perform(.articlesLoaded(viewState: _self.mainViewStateFactory.make(articles)))
+            let viewState = _self.mainViewStateFactory.make(articles)
+            _self.delegate?.perform(.articlesLoaded(viewState: viewState))
         }.onFailure { [weak self] error in
             guard let _self = self else {
                 return
@@ -79,11 +81,9 @@ extension MainKitchen: MainKitchenDelegate {
         case .appellaHealth:
             break
         default:
-            if currentCategory != category {
-                currentCategory = category
-                loadNews()
-            }
+            currentCategory = category
+            delegate?.perform(.categoryDidChange)
+            loadNews()
         }
-        
     }
 }
