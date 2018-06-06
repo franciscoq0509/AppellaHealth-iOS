@@ -21,6 +21,7 @@ class AlamofireNetworkManager: NetworkManager {
         static let updateUser = "update_user"
         static let userInfo = "user_info"
         static let privacyPolicy = "privacy_policy"
+        static let recordDeepView = "record_deep_view"
     }
     
     enum WebServiceParameters {
@@ -339,6 +340,27 @@ class AlamofireNetworkManager: NetworkManager {
                 print(error)
             }
         }
+        return promise.future
+    }
+    
+    func recordDeepView(articleId: Int) -> Future<Void, AnyError> {
+        let promise = Promise<Void, AnyError>()
+        var requestUrl = getUrl(with: WebServiceMethods.news)
+        requestUrl.appendPathComponent(WebServiceMethods.recordDeepView)
+        requestUrl.appendPathComponent(String(articleId))
+        Alamofire.request(requestUrl, method: .post, headers: headers).responseJSON { [weak self] response in
+            guard let _self = self else {
+                return
+            }
+            if let statusCode = response.response?.statusCode, let errorCode = ErrorCode(rawValue: statusCode) {
+                let error = _self.errorHandler.handle(errorCode: errorCode)
+                promise.failure(AnyError(error))
+            }
+            if let error = response.error {
+                print(error)
+            }
+        }
+        
         return promise.future
     }
 }

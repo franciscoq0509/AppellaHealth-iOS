@@ -9,11 +9,14 @@
 import Foundation
 
 enum ArticleViewEvent {
-    case didSelectArticleWith(id: Int)
+    case initWithArticle(id: Int)
     case didSwipeToNextArticle
     case didSwipeToPreviousArticle
     case setupArticlesCategory(ArticleCategory)
     case refreshData
+    case didSelectArticleWith(id: Int)
+    case didOpenVideo
+    case didOpenGalleryView
 }
 
 enum ArticleState {
@@ -48,7 +51,7 @@ class ArticleKitchen: Kitchen {
     
     func receive(event: ArticleViewEvent) {
         switch event {
-        case .didSelectArticleWith(let id):
+        case .initWithArticle(let id):
             articleStateVariables.setCurrentArticleId(id)
             loadArticle()
         case .didSwipeToNextArticle:
@@ -59,6 +62,14 @@ class ArticleKitchen: Kitchen {
             articleStateVariables.setArticlesCategory(category)
         case .refreshData:
             loadArticle()
+        case .didSelectArticleWith(id: let id):
+            if let viewState = getViewStateForArticleWith(id: id) {
+                delegate?.perform(.didLoadNextArticle(viewState: viewState))
+            }
+        case .didOpenGalleryView:
+            recordDeepView()
+        case .didOpenVideo:
+            recordDeepView()
         }
     }
     
@@ -79,16 +90,17 @@ class ArticleKitchen: Kitchen {
                     return
                 }
                 _self.delegate?.perform(.finishLoading)
+                
+                if let currentArticleId = _self.articleStateVariables.currentArticleId,
+                    currentArticleId != article.articleId {
+                    return
+                }
+                
                 _self.articleStateVariables.setArticles(articles)
-                var nextArticles = articles
-                if let indexOfArticleToRemove = articles.index(where: {$0.articleId == article.articleId}) {
-                    nextArticles = _self.getArticles(after: indexOfArticleToRemove)
+                
+                if let viewState = _self.getViewStateForArticleWith(id: article.articleId) {
+                    _self.delegate?.perform(.dataLoaded(viewState: viewState))
                 }
-                guard let articlesCategory = _self.articleStateVariables.articlesCategory else {
-                    fatalError("Expected article category")
-                }
-                let viewState = _self.articleViewStateFactory.make(article, nextArticles, category: articlesCategory)
-                _self.delegate?.perform(.dataLoaded(viewState: viewState))
             }.onFailure { [weak self] error in
                 guard let _self = self else {
                     return
@@ -113,6 +125,23 @@ class ArticleKitchen: Kitchen {
         }
     }
     
+    private func getViewStateForArticleWith(id: Int) -> ArticleViewState? {
+        guard let articles = articleStateVariables.articles,
+            let articleIndex = articles.index(where: {$0.articleId == id}) else {
+                return nil
+        }
+        let article = articles[articleIndex]
+        
+        articleStateVariables.setCurrentArticleId(article.articleId)
+        let nextArticles = getArticles(after: articleIndex)
+        guard let articlesCategory = articleStateVariables.articlesCategory else {
+            fatalError("Expected articles category")
+        }
+        let viewState = articleViewStateFactory.make(article, nextArticles, category: articlesCategory)
+        
+        return viewState
+    }
+    
     private func otherArticle(type: ArticleSwitch) {
         guard  let currentArticleId = articleStateVariables.currentArticleId,
             let articles = articleStateVariables.articles,
@@ -132,13 +161,11 @@ class ArticleKitchen: Kitchen {
         }
         
         let otherArticleIndex = type == .next ? articles.index(after: currentArticleIndex): articles.index(before: currentArticleIndex)
-        let otherArticle = articles[otherArticleIndex]
-        articleStateVariables.setCurrentArticleId(otherArticle.articleId)
-        let nextArticles = getArticles(after: otherArticleIndex)
-        guard let articlesCategory = articleStateVariables.articlesCategory else {
-            fatalError("Expected articles category")
+        let article = articles[otherArticleIndex]
+        guard let viewState = getViewStateForArticleWith(id: article.articleId) else {
+            return
         }
-        let viewState = articleViewStateFactory.make(otherArticle, nextArticles, category: articlesCategory)
+        
         switch type {
         case .next:
             delegate?.perform(.didLoadNextArticle(viewState: viewState))
@@ -155,5 +182,19 @@ class ArticleKitchen: Kitchen {
         }
         let nextArticles = articles[_index...]
         return Array(nextArticles)
+    }
+    
+    private func recordDeepView() {
+        guard let currentArticleId = articleStateVariables.currentArticleId else {
+            return
+        }
+        networkManager.recordDeepView(articleId: currentArticleId).onFailure { [weak self] error in
+            guard let _self = self else {
+                return
+            }
+            if error.error is InvalidTokenError {
+                _self.delegate?.perform(.logout)
+            }
+        }
     }
 }

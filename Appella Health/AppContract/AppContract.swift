@@ -17,4 +17,5 @@ protocol NetworkManager {
     func getPrivacyPolicy() -> Future<String, AnyError>
     func getArticles(category: ArticleCategory) -> Future<[Article], AnyError>
     func getArticle(articleId: Int) -> Future<Article, AnyError>
+    func recordDeepView(articleId: Int) -> Future<Void, AnyError>
 }

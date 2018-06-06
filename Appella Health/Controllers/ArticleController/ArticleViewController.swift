@@ -29,7 +29,7 @@ class ArticleViewController: BaseViewController {
             guard let articleId = articleId else {
                 return
             }
-            kitchen?.receive(event: .didSelectArticleWith(id: articleId))
+            kitchen?.receive(event: .initWithArticle(id: articleId))
         }
     }
     private var articlesCategory: ArticleCategory? {
@@ -63,6 +63,7 @@ class ArticleViewController: BaseViewController {
         
         addTextToRightBarItem(text: NSLocalizedString("Appella Health", comment: ""))
         removeBackButtonTitle()
+        articleView.frame = view.bounds
     }
     
     //MARK: - Helpers
@@ -131,15 +132,7 @@ extension ArticleViewController: KitchenDelegate {
 
 extension ArticleViewController: ArticleViewControllerDelegate {
     func didSelectArticleWith(id: Int) {
-        let storyboard = UIStoryboard.article
-        guard let viewController = storyboard.instantiateInitialViewController() as? ArticleViewController else {
-            fatalError("Unexpected view controller")
-        }
-        guard let articlesCategory = kitchen?.articleStateVariables.articlesCategory else {
-            fatalError("Expected articles category")
-        }
-        viewController.setup(articleId: id, articlesCategory: articlesCategory)
-        navigationController?.show(viewController, sender: self)
+        kitchen?.receive(event: .didSelectArticleWith(id: id))
     }
     
     func playVideo(url: String?) {
@@ -151,6 +144,7 @@ extension ArticleViewController: ArticleViewControllerDelegate {
         let avPlayerController = VideoPlayerViewController()
         avPlayerController.player = avPlayer
         navigationController?.present(avPlayerController, animated: true, completion: nil)
+        kitchen?.receive(event: .didOpenVideo)
     }
     
     func show(photos: [String]) {
@@ -160,6 +154,7 @@ extension ArticleViewController: ArticleViewControllerDelegate {
         }
         viewController.photos = photos
         navigationController?.show(viewController, sender: self)
+        kitchen?.receive(event: .didOpenGalleryView)
     }
     
     func nextArticle() {

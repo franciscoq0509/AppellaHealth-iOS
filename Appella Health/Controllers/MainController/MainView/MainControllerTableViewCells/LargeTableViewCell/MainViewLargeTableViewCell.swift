@@ -23,6 +23,7 @@ class MainViewLargeTableViewCell: UITableViewCell {
     @IBOutlet private var playIcon: UIImageView!
     @IBOutlet private var title: UILabel!
     @IBOutlet private var gradientView: UIView!
+    @IBOutlet private var bottomSpacing: NSLayoutConstraint!
     
     func configure(with article: ArticleViewModel) {
         if let imageUrl = article.imageUrl {
@@ -37,6 +38,12 @@ class MainViewLargeTableViewCell: UITableViewCell {
         }
         else {
             playIcon.isHidden = true
+        }
+        switch article.imageType {
+        case .full:
+            bottomSpacing.constant = 0
+        case .half:
+            bottomSpacing.constant = 1
         }
         setupGradient()
     }

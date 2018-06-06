@@ -13,6 +13,7 @@
 		45094C2E2076CAA200CBD73B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45094C2D2076CAA200CBD73B /* ErrorHandler.swift */; };
 		45094C312076CC1400CBD73B /* InvalidToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45094C302076CC1400CBD73B /* InvalidToken.swift */; };
 		45094C332076D11800CBD73B /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45094C322076D11800CBD73B /* Logout.swift */; };
+		450F6EE220975FFC00EB4DC2 /* PushNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450F6EE120975FFC00EB4DC2 /* PushNotificationsManager.swift */; };
 		4520FA56206A5924006FF6A4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4520FA55206A5924006FF6A4 /* Register.storyboard */; };
 		4520FA59206A596A006FF6A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA58206A596A006FF6A4 /* RegisterViewController.swift */; };
 		4520FA5C206A5D3F006FF6A4 /* AppellaHealthColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520FA5B206A5D3F006FF6A4 /* AppellaHealthColors.swift */; };
@@ -44,6 +45,7 @@
 		452EB46E2072264C000EFD96 /* GalleryViewStateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB46D2072264C000EFD96 /* GalleryViewStateFactory.swift */; };
 		452EB470207263C6000EFD96 /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452EB46F207263C6000EFD96 /* Photo.storyboard */; };
 		452EB473207265F9000EFD96 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452EB472207265F9000EFD96 /* PhotoViewController.swift */; };
+		4547C86320912DC9003EEE44 /* UnselectableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4547C86220912DC8003EEE44 /* UnselectableTextView.swift */; };
 		456EE3472072D1760088D8A9 /* ArticleMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456EE3452072D1760088D8A9 /* ArticleMainTableViewCell.swift */; };
 		456EE3482072D1760088D8A9 /* ArticleMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456EE3462072D1760088D8A9 /* ArticleMainTableViewCell.xib */; };
 		456EE34A20738B8C0088D8A9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456EE34920738B8C0088D8A9 /* UserInfo.swift */; };
@@ -63,7 +65,7 @@
 		4576B34A20699AFB00839269 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B34920699AFB00839269 /* UserDefaults+Extensions.swift */; };
 		4576B34C2069A36A00839269 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B34B2069A36A00839269 /* Response.swift */; };
 		4576B350206A378D00839269 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B34F206A378D00839269 /* UIView+Extensions.swift */; };
-		4576B352206A388E00839269 /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4576B351206A388E00839269 /* localizable.strings */; };
+		4576B352206A388E00839269 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4576B351206A388E00839269 /* Localizable.strings */; };
 		4576B357206A39F600839269 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B356206A39F600839269 /* String+Extensions.swift */; };
 		458BBB6720697FAD00F32C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458BBB6620697FAD00F32C99 /* AppDelegate.swift */; };
 		458BBB6E20697FAD00F32C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458BBB6D20697FAD00F32C99 /* Assets.xcassets */; };
@@ -146,6 +148,7 @@
 		45094C2D2076CAA200CBD73B /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		45094C302076CC1400CBD73B /* InvalidToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidToken.swift; sourceTree = "<group>"; };
 		45094C322076D11800CBD73B /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
+		450F6EE120975FFC00EB4DC2 /* PushNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsManager.swift; sourceTree = "<group>"; };
 		4520FA55206A5924006FF6A4 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		4520FA58206A596A006FF6A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4520FA5B206A5D3F006FF6A4 /* AppellaHealthColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppellaHealthColors.swift; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		452EB46D2072264C000EFD96 /* GalleryViewStateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewStateFactory.swift; sourceTree = "<group>"; };
 		452EB46F207263C6000EFD96 /* Photo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photo.storyboard; sourceTree = "<group>"; };
 		452EB472207265F9000EFD96 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		4547C86220912DC8003EEE44 /* UnselectableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectableTextView.swift; sourceTree = "<group>"; };
 		456EE3452072D1760088D8A9 /* ArticleMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleMainTableViewCell.swift; sourceTree = "<group>"; };
 		456EE3462072D1760088D8A9 /* ArticleMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleMainTableViewCell.xib; sourceTree = "<group>"; };
 		456EE34920738B8C0088D8A9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -196,7 +200,7 @@
 		4576B34920699AFB00839269 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		4576B34B2069A36A00839269 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		4576B34F206A378D00839269 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		4576B351206A388E00839269 /* localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = localizable.strings; sourceTree = "<group>"; };
+		4576B351206A388E00839269 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4576B356206A39F600839269 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		458BBB6320697FAD00F32C99 /* Appella Health.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Appella Health.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		458BBB6620697FAD00F32C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +288,14 @@
 				45094C302076CC1400CBD73B /* InvalidToken.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		450F6EE020975FDB00EB4DC2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				450F6EE120975FFC00EB4DC2 /* PushNotificationsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		4520FA57206A5954006FF6A4 /* RegisterController */ = {
@@ -397,6 +409,14 @@
 			path = PhotoController;
 			sourceTree = "<group>";
 		};
+		4547C86120912D98003EEE44 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				4547C86220912DC8003EEE44 /* UnselectableTextView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		456EE3442072D1480088D8A9 /* ArticleMainTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +506,8 @@
 		458BBB6520697FAD00F32C99 /* Appella Health */ = {
 			isa = PBXGroup;
 			children = (
+				450F6EE020975FDB00EB4DC2 /* Managers */,
+				4547C86120912D98003EEE44 /* CustomViews */,
 				45094C2F2076CBF900CBD73B /* Errors */,
 				4080911E2078048300A26BC7 /* Appella Health.entitlements */,
 				459B1D53206BC1AA00954B5B /* Helpers */,
@@ -556,7 +578,7 @@
 			isa = PBXGroup;
 			children = (
 				458BBB6D20697FAD00F32C99 /* Assets.xcassets */,
-				4576B351206A388E00839269 /* localizable.strings */,
+				4576B351206A388E00839269 /* Localizable.strings */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -817,7 +839,7 @@
 				458BBB7120697FAD00F32C99 /* LaunchScreen.storyboard in Resources */,
 				459B1D4F206BBB7800954B5B /* HelpDesk.storyboard in Resources */,
 				452EB470207263C6000EFD96 /* Photo.storyboard in Resources */,
-				4576B352206A388E00839269 /* localizable.strings in Resources */,
+				4576B352206A388E00839269 /* Localizable.strings in Resources */,
 				45FA2BA5207DF2D900C38765 /* SideMenu.storyboard in Resources */,
 				45FA2BA9207E6D7400C38765 /* ArticleView.xib in Resources */,
 				458BBB6E20697FAD00F32C99 /* Assets.xcassets in Resources */,
@@ -981,6 +1003,7 @@
 				458BBB6720697FAD00F32C99 /* AppDelegate.swift in Sources */,
 				4520FA63206A81FC006FF6A4 /* ForgotPasswordViewController.swift in Sources */,
 				459B1D30206AD07D00954B5B /* ArticleCategory.swift in Sources */,
+				450F6EE220975FFC00EB4DC2 /* PushNotificationsManager.swift in Sources */,
 				4520FA65206A8257006FF6A4 /* BlueNavigationBar.swift in Sources */,
 				452EB442206D8E94000EFD96 /* ArticleViewModel.swift in Sources */,
 				452EB440206D8D9B000EFD96 /* MainViewStateFactory.swift in Sources */,
@@ -1001,6 +1024,7 @@
 				452EB44E2071072B000EFD96 /* ArticleViewState.swift in Sources */,
 				452EB46320718102000EFD96 /* GalleryView.swift in Sources */,
 				459B1D6E206C0C7400954B5B /* PrivacyPolicyViewController.swift in Sources */,
+				4547C86320912DC9003EEE44 /* UnselectableTextView.swift in Sources */,
 				4576B34220698C6800839269 /* AlamofireNetworkManager.swift in Sources */,
 				459B1D3F206B9CC400954B5B /* MainKitchen.swift in Sources */,
 				452EB43D206D8D59000EFD96 /* MainViewState.swift in Sources */,
@@ -1068,7 +1092,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1084,7 +1108,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1214,7 +1238,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.appllahealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1233,7 +1257,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.appllahealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

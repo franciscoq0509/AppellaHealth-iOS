@@ -26,6 +26,13 @@ class MainAssembly: Assembly {
             return AlamofireNetworkManager(errorHandler: errorHandler)
         }
         
+        //MARK: - Push Notifications Manager
+        
+        container.register(PushNotificationsManager.self) { resolver in
+            let networkManager = resolver.forceResolve(NetworkManager.self)
+            return PushNotificationsManager(networkManager: networkManager)
+        }
+        
         //MARK: - Helpers
         
         container.register(ArticleConverter.self) { _ in
@@ -36,7 +43,8 @@ class MainAssembly: Assembly {
         
         container.register(LoginKitchen.self) { resolver in
             let networkManager = resolver.forceResolve(NetworkManager.self)
-            return LoginKitchen(networkManager: networkManager)
+            let pushNotificationsManager = resolver.forceResolve(PushNotificationsManager.self)
+            return LoginKitchen(networkManager: networkManager, pushNotificationsManager: pushNotificationsManager)
         }
         container.storyboardInitCompleted(LoginViewController.self) { resolver, controller in
             let loginKitchen = resolver.forceResolve(LoginKitchen.self)
@@ -104,7 +112,8 @@ class MainAssembly: Assembly {
         
         container.register(AccountKitchen.self) { resolver in
             let networkManager = resolver.forceResolve(NetworkManager.self)
-            return AccountKitchen(networkManager: networkManager)
+            let pushNotificationsManager = resolver.forceResolve(PushNotificationsManager.self)
+            return AccountKitchen(networkManager: networkManager, pushNotificationsManager: pushNotificationsManager)
         }
         container.storyboardInitCompleted(AccountViewController.self) { resolver, controller in
             

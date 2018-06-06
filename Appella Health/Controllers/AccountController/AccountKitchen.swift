@@ -29,9 +29,11 @@ class AccountKitchen: Kitchen {
     
     var delegate: AnyKitchenDelegate<Command>?
     let networkManager: NetworkManager
+    private let pushNotificationsManager: PushNotificationsManager
     
-    init(networkManager: NetworkManager) {
+    init(networkManager: NetworkManager, pushNotificationsManager: PushNotificationsManager) {
         self.networkManager = networkManager
+        self.pushNotificationsManager = pushNotificationsManager
     }
     
     func receive(event: ViewEvent) {
@@ -68,7 +70,7 @@ class AccountKitchen: Kitchen {
     
     func switchNotificationsStatus(_ send: Bool) {
         delegate?.perform(.startLoading)
-        networkManager.switchNotificationStatus(status: send).onSuccess { [weak self] message in
+        pushNotificationsManager.setNotificationsStatus(send).onSuccess { [weak self] message in
             guard let _self = self else {
                 return
             }
@@ -88,7 +90,7 @@ class AccountKitchen: Kitchen {
     }
     
     private func didLogout() {
-        networkManager.switchNotificationStatus(status: false)
+        pushNotificationsManager.setNotificationsStatus(false)
         UserDefaults.setApiKey(nil)
     }
 }

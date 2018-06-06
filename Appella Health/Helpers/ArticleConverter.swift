@@ -10,7 +10,7 @@ import Foundation
 
 class ArticleConverter {
     func convert(article: Article) -> ArticleViewModel {
-        let convertedDate = AppellaHealthDateFormatter().convert(article.startDate)
+        let convertedDate = AppellaHealthDateFormatter().convert(article.publishDate)
         let photoUrls = article.photos.map { photo -> String in
             return photo.image
         }

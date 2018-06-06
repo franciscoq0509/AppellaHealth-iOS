@@ -13,11 +13,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="330" id="KGk-i7-Jjw" customClass="ArticleMainTableViewCell" customModule="Appella_Health" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="331" height="330"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="357" id="KGk-i7-Jjw" customClass="ArticleMainTableViewCell" customModule="Appella_Health" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="357"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="331" height="329.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="331" height="356.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yHN-86-Rpa">
@@ -39,42 +39,44 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enJ-FF-jJd">
-                        <rect key="frame" x="16" y="265.5" width="299" height="23"/>
+                        <rect key="frame" x="16" y="265.5" width="299" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDj-hF-ruM">
-                        <rect key="frame" x="16" y="296.5" width="299" height="16.5"/>
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0C-cT-jzy" customClass="UnselectableTextView" customModule="Appella_Health" customModuleProvider="target">
+                        <rect key="frame" x="16" y="284" width="299" height="52"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="yHN-86-Rpa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3rz-Z3-Ydi"/>
                     <constraint firstItem="09M-52-iWE" firstAttribute="centerX" secondItem="yHN-86-Rpa" secondAttribute="centerX" id="9K0-UY-JIo"/>
                     <constraint firstItem="yHN-86-Rpa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CAt-Z6-QhS"/>
-                    <constraint firstItem="NDj-hF-ruM" firstAttribute="top" secondItem="enJ-FF-jJd" secondAttribute="bottom" constant="8" id="JeQ-jt-jjE"/>
+                    <constraint firstAttribute="bottom" secondItem="v0C-cT-jzy" secondAttribute="bottom" constant="20.5" id="D3S-PE-AcM"/>
+                    <constraint firstItem="v0C-cT-jzy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HeK-RC-WVE"/>
                     <constraint firstItem="enJ-FF-jJd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="K8I-Uz-7ZM"/>
+                    <constraint firstItem="v0C-cT-jzy" firstAttribute="top" secondItem="enJ-FF-jJd" secondAttribute="bottom" constant="18.5" id="N4B-Sa-g1P"/>
                     <constraint firstAttribute="trailing" secondItem="yHN-86-Rpa" secondAttribute="trailing" id="OD3-2h-hTe"/>
+                    <constraint firstAttribute="trailing" secondItem="v0C-cT-jzy" secondAttribute="trailing" constant="16" id="P4D-f7-XwU"/>
                     <constraint firstAttribute="trailing" secondItem="enJ-FF-jJd" secondAttribute="trailing" constant="16" id="Z37-IC-8Jq"/>
-                    <constraint firstAttribute="trailing" secondItem="NDj-hF-ruM" secondAttribute="trailing" constant="16" id="aJi-ex-khb"/>
-                    <constraint firstItem="NDj-hF-ruM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="gQ2-CG-hsB"/>
                     <constraint firstItem="enJ-FF-jJd" firstAttribute="top" secondItem="yHN-86-Rpa" secondAttribute="bottom" constant="8" id="iad-gT-Ryj"/>
-                    <constraint firstAttribute="bottom" secondItem="NDj-hF-ruM" secondAttribute="bottom" constant="16" id="jW2-3V-xzH"/>
                     <constraint firstItem="09M-52-iWE" firstAttribute="centerY" secondItem="yHN-86-Rpa" secondAttribute="centerY" id="s2l-XH-Fpc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="descriptionLabel" destination="NDj-hF-ruM" id="Ahp-Wu-91U"/>
+                <outlet property="descriptionTextView" destination="v0C-cT-jzy" id="w7Y-7T-z5w"/>
                 <outlet property="height" destination="ot4-a7-jKw" id="5BD-a1-5z7"/>
                 <outlet property="mainImage" destination="yHN-86-Rpa" id="GH5-gG-aJH"/>
                 <outlet property="title" destination="enJ-FF-jJd" id="aiU-OP-xjo"/>
                 <outlet property="videoButton" destination="09M-52-iWE" id="2fT-VT-Bwt"/>
             </connections>
-            <point key="canvasLocation" x="39.5" y="197"/>
+            <point key="canvasLocation" x="39.5" y="210.5"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -26,9 +26,11 @@ class LoginKitchen: Kitchen {
     var delegate: AnyKitchenDelegate<LoginState>?
     
     private let networkManager: NetworkManager
+    private let pushNotificationsManager: PushNotificationsManager
     
-    init(networkManager: NetworkManager) {
+    init(networkManager: NetworkManager, pushNotificationsManager: PushNotificationsManager) {
         self.networkManager = networkManager
+        self.pushNotificationsManager = pushNotificationsManager
     }
     
     func receive(event: ViewEvent) {
@@ -45,7 +47,7 @@ class LoginKitchen: Kitchen {
                 return
             }
             UserDefaults.setApiKey(user.apiKey)
-            _self.networkManager.switchNotificationStatus(status: true).onSuccess { [weak self] _ in
+            _self.pushNotificationsManager.setNotificationsStatus(true).onSuccess { [weak self] _ in
                     guard let _self = self else {
                         return
                     }

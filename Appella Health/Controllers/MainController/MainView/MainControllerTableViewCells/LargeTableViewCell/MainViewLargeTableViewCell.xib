@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BY7-qs-0iU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="478.5"/>
                     </imageView>
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7WO-ln-eDT">
                         <rect key="frame" x="125" y="204" width="70" height="70"/>
@@ -30,7 +30,7 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqd-rR-lTq">
-                        <rect key="frame" x="0.0" y="443" width="320" height="37"/>
+                        <rect key="frame" x="0.0" y="443" width="320" height="35.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lavel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh6-go-6bv">
@@ -41,7 +41,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="BY7-qs-0iU" secondAttribute="bottom" constant="-0.5" id="75T-3T-Pgr"/>
+                    <constraint firstAttribute="bottom" secondItem="BY7-qs-0iU" secondAttribute="bottom" constant="1" id="75T-3T-Pgr"/>
                     <constraint firstItem="BY7-qs-0iU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8F2-6P-FFi"/>
                     <constraint firstItem="BY7-qs-0iU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GbO-dj-0ug"/>
                     <constraint firstItem="oh6-go-6bv" firstAttribute="top" secondItem="wqd-rR-lTq" secondAttribute="top" id="JY6-9a-bOT"/>
@@ -51,13 +51,14 @@
                     <constraint firstItem="7WO-ln-eDT" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="p43-Sl-dUu"/>
                     <constraint firstItem="wqd-rR-lTq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="t1Y-Js-fuc"/>
                     <constraint firstAttribute="bottom" secondItem="oh6-go-6bv" secondAttribute="bottom" constant="9.5" id="uwL-BU-vWu"/>
-                    <constraint firstAttribute="bottom" secondItem="wqd-rR-lTq" secondAttribute="bottom" id="v3s-qr-N4w"/>
+                    <constraint firstItem="BY7-qs-0iU" firstAttribute="bottom" secondItem="wqd-rR-lTq" secondAttribute="bottom" id="v3s-qr-N4w"/>
                     <constraint firstAttribute="trailing" secondItem="wqd-rR-lTq" secondAttribute="trailing" id="vYs-be-R8a"/>
                     <constraint firstAttribute="trailing" secondItem="oh6-go-6bv" secondAttribute="trailing" constant="16" id="yCN-sj-SPd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bottomSpacing" destination="75T-3T-Pgr" id="xwe-Fz-MOa"/>
                 <outlet property="gradientView" destination="wqd-rR-lTq" id="iiv-kh-4x9"/>
                 <outlet property="mainImage" destination="BY7-qs-0iU" id="VqT-wY-dWu"/>
                 <outlet property="playIcon" destination="7WO-ln-eDT" id="bjv-9v-R74"/>

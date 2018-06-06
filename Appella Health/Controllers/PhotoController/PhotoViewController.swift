@@ -29,11 +29,12 @@ class PhotoViewController: UIViewController {
     
     //MARK: - Actions
     
-    @IBAction private func didTapShareButton() {
+    @IBAction private func didTapShareButton(_ sender: UIButton) {
         guard let image = image else {
             return
         }
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = sender
         self.present(activityViewController, animated: true, completion: nil)
     }
 }

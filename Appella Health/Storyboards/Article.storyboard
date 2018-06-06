@@ -18,18 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-c7-bKn" customClass="ArticleView" customModule="Appella_Health" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-c7-bKn" customClass="ArticleView" customModule="Appella_Health" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="WNb-c7-bKn" firstAttribute="top" secondItem="60G-PV-XcQ" secondAttribute="top" id="8R3-hC-2aG"/>
-                            <constraint firstAttribute="bottom" secondItem="WNb-c7-bKn" secondAttribute="bottom" id="QRW-bU-MSn"/>
-                            <constraint firstItem="yEw-b0-RYc" firstAttribute="trailing" secondItem="WNb-c7-bKn" secondAttribute="trailing" id="e2B-cy-JdM"/>
-                            <constraint firstItem="WNb-c7-bKn" firstAttribute="leading" secondItem="yEw-b0-RYc" secondAttribute="leading" id="puv-xR-b0W"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yEw-b0-RYc"/>
                     </view>
                     <connections>

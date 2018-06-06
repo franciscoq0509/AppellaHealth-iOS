@@ -54,6 +54,7 @@ struct Article: Codable {
     let description: String
     let startDate: String?
     let endDate: String?
+    let publishDate: String
     let type: ArticleType?
     let thumbnailImage: String?
     let video: String?
@@ -67,6 +68,7 @@ struct Article: Codable {
         case description
         case startDate = "start_date"
         case endDate = "end_date"
+        case publishDate = "publish_date"
         case type
         case thumbnailImage = "thumbnail_image"
         case video

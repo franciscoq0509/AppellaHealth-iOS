@@ -18,7 +18,7 @@ class ArticleMainTableViewCell: UITableViewCell {
 
     @IBOutlet private var mainImage: UIImageView!
     @IBOutlet private var title: UILabel!
-    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var descriptionTextView: UnselectableTextView!
     @IBOutlet private var videoButton: UIButton!
     @IBOutlet private var height: NSLayoutConstraint!
     
@@ -35,12 +35,12 @@ class ArticleMainTableViewCell: UITableViewCell {
             mainImage.addGestureRecognizer(imageTapGestureRecognizer)
         }
         title.text = article.title
-        
+        descriptionTextView.textContainer.lineFragmentPadding = 0
         if let attributedText = article.description.stringFromHtml() {
-            descriptionLabel.attributedText = attributedText
+            descriptionTextView.attributedText = attributedText
         }
         else {
-            descriptionLabel.text = article.description
+            descriptionTextView.text = article.description
         }
         
         if article.showVideoButton, article.video != nil {

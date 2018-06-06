@@ -29,17 +29,13 @@ extension String {
     }
     
     func stringFromHtml() -> NSMutableAttributedString? {
-        guard let data = self.data(using: .utf8, allowLossyConversion: true),
+        
+        let html = String(format:"<span style=\"font-family: '-apple-system', '%@'; font-size: \(17.0)\">%@</span>", Consts.fontName, self)
+
+        
+        guard let data = html.data(using: .utf8, allowLossyConversion: true),
             let string = try? NSMutableAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil) else {
             return nil
-        }
-        if let font = UIFont(name: Consts.fontName, size: 17.0) {
-            string.addAttribute(.font, value: font, range: NSMakeRange(0, string.string.count))
-            
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = 0.5 * font.lineHeight
-            paragraphStyle.paragraphSpacing = font.lineHeight
-            string.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, string.string.count))
         }
 
         return string
